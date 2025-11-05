@@ -12,7 +12,11 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        $projects = Project::query()
+            ->latest('id')
+            ->get();
+
+        return view('projects.index', compact('projects'));
     }
 
     /**
