@@ -88,7 +88,9 @@
 
             <div class="project-card">
                 <div class="project-card__media">
-                    <img src="/storage/projects/my-app-cover.jpg" alt="My App cover">
+                    <video autoplay loop muted playsinline preload="metadata" class="w-full h-full object-cover block">
+                        <source src="{{ asset('storage/projects/mp-demo-vid.mp4') }}" type="video/mp4">
+                    </video>
                 </div>
 
                 <div class="project-card__body">
