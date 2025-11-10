@@ -12,6 +12,7 @@
     <section class="px-4 sm:px-6 lg:px-8">
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
+            {{-- Industry Project --}}
             <div class="project-card">
                 <div class="project-card__media">
                     <video autoplay loop muted playsinline preload="metadata" class="w-full h-full object-cover block">
@@ -24,11 +25,16 @@
                     <h3 class="project-card__title">Multimodal AI - <italic>Woodside Energy</italic>
                     </h3>
                     <p class="project-card__desc">
-                        Improving LLM responses to Multimodal data input through document encoding methods.
+                        Developed a custom multimodal document encoding pipeline for Amazon Bedrock models,
+                        enabling efficient interpretation of images and tables within DOCX and PDF files while
+                        significantly reducing token usage.
                     </p>
+
 
                     <div class="project-card__meta">
                         <span class="project-card__tag">Amazon Bedrock</span>
+                        <span class="project-card__tag">Claude Sonnet 3.0</span>
+                        <span class="project-card__tag">Document Encoding</span>
                         <span class="project-card__tag">Python</span>
                         <span class="project-card__tag">HTML</span>
                         <span class="project-card__tag">Industry</span>
@@ -48,6 +54,7 @@
                 </div>
             </div>
 
+            {{-- Curtin Capstone --}}
             <div class="project-card">
                 <div class="project-card__media">
                     <video autoplay loop muted playsinline preload="metadata" class="w-full h-full object-cover block">
@@ -58,9 +65,15 @@
 
                 <div class="project-card__body">
                     <h3 class="project-card__title">Wysp: A Splitscreen IDE - Curtin University</h3>
-                    <p class="project-card__desc">
-                        Collaborative project creating a coding tool for Computer Science Students. Based on UC
-                        Berkley's Pacman Project.
+                    <p class="project-card__desc">  
+                        Collaborative capstone project developing an educational coding environment for Computer Science
+                        students,
+                        inspired by <a href="https://inst.eecs.berkeley.edu/~cs188/fa24/projects/" target="_blank"
+                            rel="noopener noreferrer" class="underline hover:opacity-80">
+                            UC Berkeley’s Pacman AI project
+                        </a>. Delivered a cross-platform IDE with project management, autosaving, syntax checking, and
+                        integrated
+                        Java/Python execution to support teaching search and agent-based algorithms.
                     </p>
 
                     <div class="project-card__meta">
@@ -85,7 +98,7 @@
 
 
             </div>
-
+            {{-- Machine Perception --}}
             <div class="project-card">
                 <div class="project-card__media">
                     <video autoplay loop muted playsinline preload="metadata" class="w-full h-full object-cover block">
@@ -120,6 +133,49 @@
                     </button>
                 </div>
             </div>
+
+            {{-- Machine Learning --}}
+            <div class="project-card">
+                <div class="project-card__media">
+                    <video autoplay loop muted playsinline preload="metadata" class="w-full h-full object-cover block">
+                        <source src="{{ asset('storage/projects/bleve-ml-demo.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="project-card__body">
+                    <h3 class="project-card__title">BLEVE Peak Pressure Prediction — Curtin University</h3>
+                    <p class="project-card__desc">
+                        Data-driven ML project to predict peak blast pressure around an obstacle during LPG BLEVEs using
+                        27 wall-mounted sensors and thermofluid variables. Implemented cleaning, feature engineering,
+                        and scaling;
+                        compared diverse models (SVR, Random Forest, XGBoost) with MAPE and R².
+                    </p>
+
+                    <div class="project-card__meta">
+                        <span class="project-card__tag">Python</span>
+                        <span class="project-card__tag">scikit-learn</span>
+                        <span class="project-card__tag">XGBoost</span>
+                        <span class="project-card__tag">Random Forest</span>
+                        <span class="project-card__tag">SVR</span>
+                        <span class="project-card__tag">Pandas</span>
+                        <span class="project-card__tag">Kaggle</span>
+                        <span class="project-card__tag">Google Colab</span>
+                    </div>
+                </div>
+
+                <div class="project-card__divider"></div>
+
+                <div class="project-card__actions">
+                    <button class="project-card__button">
+                        View project
+                        <svg class="size-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12.293 3.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L14 6.414V17a1 1 0 11-2 0V6.414l-2.293 2.293A1 1 0 018.293 7.293l4-4z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
 
         </div>
     </section>
