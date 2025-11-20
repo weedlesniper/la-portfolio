@@ -65,7 +65,7 @@
 
                 <div class="project-card__body">
                     <h3 class="project-card__title">Wysp: A Splitscreen IDE - Curtin University</h3>
-                    <p class="project-card__desc">  
+                    <p class="project-card__desc">
                         Collaborative capstone project developing an educational coding environment for Computer Science
                         students,
                         inspired by <a href="https://inst.eecs.berkeley.edu/~cs188/fa24/projects/" target="_blank"
@@ -95,9 +95,9 @@
                         </svg>
                     </button>
                 </div>
-
-
             </div>
+
+
             {{-- Machine Perception --}}
             <div class="project-card">
                 <div class="project-card__media">
@@ -138,7 +138,7 @@
             <div class="project-card">
                 <div class="project-card__media">
                     <video autoplay loop muted playsinline preload="metadata" class="w-full h-full object-cover block">
-                        <source src="{{ asset('storage/projects/bleve-ml-demo.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('storage/projects/ml-demo.mp4') }}" type="video/mp4">
                     </video>
                 </div>
 
@@ -177,6 +177,49 @@
             </div>
 
 
+            {{-- OCR Accessibility Tool --}}
+            <div class="project-card">
+                <div class="project-card__media">
+                    <video autoplay loop muted playsinline preload="metadata"
+                        class="w-full h-full object-cover block">
+                        <source src="{{ asset('storage/projects/ocr-demo.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="project-card__body">
+                    <h3 class="project-card__title">OCR Accessibility Tool – North Metropolitan TAFE</h3>
+                    <p class="project-card__desc">
+                        A custom-built accessibility system designed to support students with visual
+                        impairments—particularly
+                        screen-reader users such as those using JAWS—when learning software development. Coding tutorial
+                        videos
+                        often present key information visually, creating barriers for blind or low-vision learners. This
+                        tool
+                        solves that problem by enabling students to pause any video and instantly generate accurate,
+                        screen-reader-friendly text from the paused frame using OCR (Optical Character Recognition).
+                    </p>
+
+                    <div class="project-card__meta">
+                        <span class="project-card__tag">Python</span>
+                        <span class="project-card__tag">FastAPI</span>
+                        <span class="project-card__tag">React</span>
+                        <span class="project-card__tag">OCR</span>
+                        <span class="project-card__tag">Accessibility</span>
+                    </div>
+                </div>
+
+                <div class="project-card__divider"></div>
+
+                <div class="project-card__actions">
+                    <button class="project-card__button">
+                        View project
+                        <svg class="size-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12.293 3.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L14 6.414V17a1 1 0 11-2 0V6.414l-2.293 2.293A1 1 0 018.293 7.293l4-4z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 
