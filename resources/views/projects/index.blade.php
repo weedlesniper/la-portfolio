@@ -1,13 +1,12 @@
 {{-- resources/views/projects/index.blade.php --}}
 <x-app-layout>
     {{-- Page header (renders inside app.blade’s white header bar) --}}
-    <x-slot name="header">
-        <div class="flex items-baseline justify-between">
-            <h1 class="text-2xl font-semibold text-gray-900 ">
-                {{ __('Projects') }}
-            </h1>
-        </div>
-    </x-slot>
+
+    <div class="flex justify-start py-4 px-4 sm:px-6 lg:px-8">
+        <h1 class="text-2xl font-semibold text-gray-900 ">
+            {{ __(' Recent Projects') }}
+        </h1>
+    </div>
 
     <section class="px-4 sm:px-6 lg:px-8">
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -22,8 +21,14 @@
                 </div>
 
                 <div class="project-card__body">
-                    <h3 class="project-card__title">Multimodal AI - <italic>Woodside Energy</italic>
-                    </h3>
+                    <div class="project-card__badge">
+                        <img src="{{ asset('storage/logos/woodside.png') }}" alt="Woodside Energy logo"
+                            class="project-card__badge-logo">
+                        <span class="project-card__badge-text">
+                            Woodside Energy
+                        </span>
+                    </div>
+                    <h3 class="project-card__title">Multimodal AI</h3>
                     <p class="project-card__desc">
                         Developed a custom multimodal document encoding pipeline for Amazon Bedrock models,
                         enabling efficient interpretation of images and tables within DOCX and PDF files while
@@ -44,7 +49,7 @@
                 <div class="project-card__divider"></div>
 
                 <div class="project-card__actions">
-                    <button class="project-card__button">
+                    <button class="project-card__button ">
                         View project
                         <svg class="size-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path
@@ -56,6 +61,7 @@
 
             {{-- Curtin Capstone --}}
             <div class="project-card">
+
                 <div class="project-card__media">
                     <video autoplay loop muted playsinline preload="metadata" class="w-full h-full object-cover block">
                         <source src="{{ asset('storage/projects/wysp-demo.mp4') }}" type="video/mp4">
@@ -64,7 +70,14 @@
                 </div>
 
                 <div class="project-card__body">
-                    <h3 class="project-card__title">Wysp: A Splitscreen IDE - Curtin University</h3>
+                    <div class="project-card__badge">
+                        <img src="{{ asset('storage/logos/curtin.png') }}" alt="Curtin University logo"
+                            class="project-card__badge-logo">
+                        <span class="project-card__badge-text">
+                            Curtin University
+                        </span>
+                    </div>
+                    <h3 class="project-card__title">Wysp: A Splitscreen IDE</h3>
                     <p class="project-card__desc">
                         Collaborative capstone project developing an educational coding environment for Computer Science
                         students,
@@ -97,7 +110,6 @@
                 </div>
             </div>
 
-
             {{-- Machine Perception --}}
             <div class="project-card">
                 <div class="project-card__media">
@@ -107,7 +119,14 @@
                 </div>
 
                 <div class="project-card__body">
-                    <h3 class="project-card__title">Computer Vision Pipeline: Barcode Reader - Curtin University</h3>
+                    <div class="project-card__badge">
+                        <img src="{{ asset('storage/logos/curtin.png') }}" alt="Curtin University logo"
+                            class="project-card__badge-logo">
+                        <span class="project-card__badge-text">
+                            Curtin University
+                        </span>
+                    </div>
+                    <h3 class="project-card__title">Computer Vision Pipeline: Barcode Reader</h3>
                     <p class="project-card__desc">
                         Built a pipeline to detect barcodes, extract digits, and recognise them via SVM; robust to
                         rotation and some affine distortion.
@@ -123,14 +142,17 @@
 
                 <div class="project-card__divider"></div>
 
+
                 <div class="project-card__actions">
-                    <button class="project-card__button">
+                    <a href="https://github.com/weedlesniper/barcode-reader-2024-MP"
+                        class="project-card__button inline-flex items-center gap-2" target="_blank"
+                        rel="noopener noreferrer">
                         View project
                         <svg class="size-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path
                                 d="M12.293 3.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L14 6.414V17a1 1 0 11-2 0V6.414l-2.293 2.293A1 1 0 018.293 7.293l4-4z" />
                         </svg>
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -143,7 +165,14 @@
                 </div>
 
                 <div class="project-card__body">
-                    <h3 class="project-card__title">BLEVE Peak Pressure Prediction — Curtin University</h3>
+                    <div class="project-card__badge">
+                        <img src="{{ asset('storage/logos/curtin.png') }}" alt="Curtin University logo"
+                            class="project-card__badge-logo">
+                        <span class="project-card__badge-text">
+                            Curtin University
+                        </span>
+                    </div>
+                    <h3 class="project-card__title">BLEVE Peak Pressure Prediction</h3>
                     <p class="project-card__desc">
                         Data-driven ML project to predict peak blast pressure around an obstacle during LPG BLEVEs using
                         27 wall-mounted sensors and thermofluid variables. Implemented cleaning, feature engineering,
@@ -166,16 +195,17 @@
                 <div class="project-card__divider"></div>
 
                 <div class="project-card__actions">
-                    <button class="project-card__button">
+                    <a href="https://github.com/weedlesniper/machine-learning-2024"
+                        class="project-card__button inline-flex items-center gap-2" target="_blank"
+                        rel="noopener noreferrer">
                         View project
                         <svg class="size-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path
                                 d="M12.293 3.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L14 6.414V17a1 1 0 11-2 0V6.414l-2.293 2.293A1 1 0 018.293 7.293l4-4z" />
                         </svg>
-                    </button>
+                    </a>
                 </div>
             </div>
-
 
             {{-- OCR Accessibility Tool --}}
             <div class="project-card">
@@ -187,7 +217,14 @@
                 </div>
 
                 <div class="project-card__body">
-                    <h3 class="project-card__title">OCR Accessibility Tool – North Metropolitan TAFE</h3>
+                    <div class="project-card__badge">
+                        <img src="{{ asset('storage/logos/tafe.png') }}" alt="North Metropolitan TAFE logo"
+                            class="project-card__badge-logo">
+                        <span class="project-card__badge-text">
+                            North Metropolitan TAFE
+                        </span>
+                    </div>
+                    <h3 class="project-card__title">OCR Accessibility Tool</h3>
                     <p class="project-card__desc">
                         A custom-built accessibility system designed to support students with visual
                         impairments—particularly
@@ -211,16 +248,21 @@
                 <div class="project-card__divider"></div>
 
                 <div class="project-card__actions">
-                    <button class="project-card__button">
+                    <a href="https://github.com/weedlesniper/ocrroo-advp-project"
+                        class="project-card__button inline-flex items-center gap-2" target="_blank"
+                        rel="noopener noreferrer">
                         View project
                         <svg class="size-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path
                                 d="M12.293 3.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L14 6.414V17a1 1 0 11-2 0V6.414l-2.293 2.293A1 1 0 018.293 7.293l4-4z" />
                         </svg>
-                    </button>
+                    </a>
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
 

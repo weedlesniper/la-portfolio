@@ -17,6 +17,19 @@
          focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60;
          
 }
+.project-card__badge {
+    @apply absolute top-3 right-3 inline-flex items-center gap-2
+           rounded-full bg-white px-3 py-1
+           shadow-sm border border-slate-200;
+}
+
+.project-card__badge-logo {
+    @apply h-5 w-auto object-contain;
+}
+
+.project-card__badge-text {
+    @apply text-xs font-medium text-slate-700;
+}
 
 /* Make the whole card clickable if it's an <a> */
 .project-card--link{
