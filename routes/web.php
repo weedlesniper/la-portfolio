@@ -3,21 +3,21 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\StaticPageController;
 use Illuminate\Support\Facades\Route;
-
-
 
 Route::get('/', [StaticPageController::class, 'home'])
     ->name('home');
 
+Route::get('about', [StaticPageController::class, 'about'])
+    ->name('about');
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])
         ->name('dashboard');
 });
 
-Route::resource('projects', ProjectController::class)->only(['index','show']);
+Route::resource('projects', ProjectController::class)->only(['index', 'show']);
 
 Route::middleware(['auth', 'verified'])
     ->prefix('admin')

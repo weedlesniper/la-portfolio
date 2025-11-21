@@ -16,7 +16,7 @@ class StaticPageController extends Controller
 
     public function about(): View
     {
-        //        return view('static.about');
+        return view('static.about');
     }
 
     public function contact(): View
