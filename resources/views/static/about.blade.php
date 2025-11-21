@@ -166,6 +166,75 @@
                 A selection of other tools, libraries, and platforms I’ve had exposure to.
             </p>
 
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+
+                <div class="group tech-card">
+                    <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">
+                        C++
+                    </h3>
+                    <p class="text-xs leading-relaxed opacity-80 text-slate-400 group-hover:text-slate-100">
+                        Used C++ for embedded and IoT development, including programming ESP32 devices.
+                    </p>
+                </div>
+
+                <div class="group tech-card">
+                    <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">
+                        Qt
+                    </h3>
+                    <p class="text-xs leading-relaxed opacity-80 text-slate-400 group-hover:text-slate-100">
+                        Used Qt to build cross-platform GUI components, developing the interface for a university IDE
+                        project
+                    </p>
+                </div>
+
+                <div class="group tech-card">
+                    <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">
+                        TensorFlow
+                    </h3>
+                    <p class="text-xs leading-relaxed opacity-80 text-slate-400 group-hover:text-slate-100">
+                        Used TensorFlow for building and experimenting with machine learning models, training and
+                        evaluation.
+                    </p>
+                </div>
+
+                <div class="group tech-card">
+                    <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">
+                        FastAPI
+                    </h3>
+                    <p class="mt-1 text-xs text-slate-400 group-hover:text-slate-100">
+                        Built lightweight, high-performance APIs with FastAPI, including OCR endpoints, file handling,
+                        and backend logic for an IoT barcode reader pipeline.
+                    </p>
+                </div>
+                <div class="group tech-card">
+                    <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">
+                        OpenCV
+                    </h3>
+                    <p class="text-xs text-slate-400 group-hover:text-slate-100">
+                        Experience with OpenCV for frame extraction, image preprocessing, and computer vision workflows
+                        in ML/OCR projects.
+                    </p>
+                </div>
+                <div class="group tech-card">
+                    <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">
+                        Linux
+                    </h3>
+                    <p class="mt-1 text-xs text-slate-400 group-hover:text-slate-100">
+                        Worked with Linux through VMware and Ubuntu Server, using it for development, scripting, and
+                        backend tooling.
+                    </p>
+                </div>
+                <div class="group tech-card">
+                    <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">
+                        React
+                    </h3>
+                    <p class="mt-1 text-xs text-slate-400 group-hover:text-slate-100">
+                        Used React to build both web and mobile interfaces, including a video-annotation web app and an
+                        Expo-based mobile application.
+                    </p>
+                </div>
+            </div>
+
             <div class = "flex mt-4">
                 <i class="fa-solid fa-user-tie text-xl text-white mb-2 mr-1"></i>
                 <h2 class="text-xl font-semibold text-slate-100 mb-2">Professional Skills</h2>
