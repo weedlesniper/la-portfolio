@@ -26,7 +26,12 @@
 
     <section id="skills" class="px-4 sm:px-6 lg:px-8 py-12 border-t border-slate-800">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-xl font-semibold text-slate-100 mb-2">Technical skills</h2>
+
+            <div class = "flex">
+                <i class="fa-solid fa-gear text-xl text-white mb-2 mr-1"></i>
+                <h2 class="text-xl font-semibold text-slate-100 mb-2">Technical Skills</h2>
+            </div>
+
             <p class="text-sm text-slate-400 mb-8">
                 A quick snapshot of the tools and languages I have experience with.
             </p>
@@ -66,6 +71,23 @@
                             I’ve recently been using PHP with Laravel and Blade to build web applications, creating
                             reusable components and pairing the templating system with Tailwind for clean, consistent
                             UI.
+                        </p>
+                    </div>
+                </div>
+
+                {{-- Java --}}
+                <div class="group skills-card skills-card--java">
+                    <div
+                        class="relative mx-1 flex size-16 items-center justify-center rounded-xl bg-slate-800 overflow-hidden">
+                        @include('icons.java-mono')
+                        @include('icons.java-colour')
+                    </div>
+
+                    <div class = "w-3/4">
+                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">Java</h3>
+                        <p class="mt-1 text-xs text-slate-400 group-hover:text-slate-100">
+                            Java was my first university language, and it formed the foundation of my understanding of
+                            data structures, algorithms, and object-oriented design during my studies.
                         </p>
                     </div>
                 </div>
