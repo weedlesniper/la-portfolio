@@ -35,8 +35,8 @@
             <p class="text-sm text-slate-400 mb-8">
                 A quick snapshot of the tools and languages I have experience with.
             </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {{-- Python --}}
                 <div class="group skills-card skills-card--python">
                     <div
@@ -55,14 +55,14 @@
                 </div>
 
                 {{-- PHP --}}
-                <div class="group skills-card hover:border-indigo-400/40">
+                <div class="group skills-card hover:border-indigo-600/40">
                     <div
                         class="relative mx-1 flex size-16 items-center justify-center rounded-xl bg-slate-800 overflow-hidden">
                         <i
                             class="fa-brands fa-php
                                   text-slate-300 text-4xl
                                     transition-colors duration-200
-                                  group-hover:text-[#777BB4]"></i>
+                                  group-hover:text-indigo-400/40"></i>
                     </div>
 
                     <div class = "w-3/4">
@@ -92,11 +92,88 @@
                     </div>
                 </div>
 
+                {{-- Git --}}
+                <div class="group skills-card hover:border-[#F1502F]">
+                    <div
+                        class="relative mx-1 flex size-16 items-center justify-center rounded-xl bg-slate-800 overflow-hidden">
+                        <i
+                            class="fa-brands fa-git-alt
+                                  text-slate-300 text-4xl
+                                    transition-colors duration-200
+                                  group-hover:text-[#F1502F]"></i>
+                    </div>
+                    <div class = "w-3/4">
+                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">Git</h3>
+                        <p class="mt-1 text-xs text-slate-400 group-hover:text-slate-100">
+                            I’ve used Git extensively across multiple team projects, both as a contributor and as a
+                            project lead. I’m comfortable with branching strategies, pull request workflows, code
+                            reviews, and keeping repos organised through clear commit messages and branch naming
+                            conventions.
+                        </p>
+                    </div>
+                </div>
 
+                {{-- SQL / Databases --}}
+                <div class="group skills-card hover:border-emerald-500">
+                    <div
+                        class="relative mx-1 flex size-16 items-center justify-center rounded-xl bg-slate-800 overflow-hidden">
+                        <i
+                            class="fa-solid fa-database
+                                  text-slate-300 text-4xl
+                                    transition-colors duration-200
+                                  group-hover:text-emerald-500"></i>
+                    </div>
+                    <div class = "w-3/4">
+                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">SQL / Databases</h3>
+                        <p class="mt-1 text-xs text-slate-400 group-hover:text-slate-100">
+                            My database experience includes ER modelling, schema design, SQL querying, and applying
+                            relational theory such as normalisation and relational algebra. I’m currently building a
+                            database management tool for a TAFE client that
+                            integrates these ideas in practice.
+                        </p>
+                    </div>
+                </div>
 
-
-                {{-- Add more tiles: React, FastAPI, Laravel, SQL, Git/GitHub, Docker, Linux, etc. --}}
+                {{-- AWS --}}
+                <div class="group skills-card hover:border-[#FF9900]">
+                    <div
+                        class="relative
+                    mx-1 flex size-16 items-center justify-center rounded-xl bg-slate-800 overflow-hidden">
+                        <i
+                            class="fa-brands fa-aws
+                                  text-slate-300 text-4xl
+                                    transition-colors duration-200
+                                  group-hover:text-[#FF9900]"></i>
+                    </div>
+                    <div class = "w-3/4">
+                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">Cloud Computing</h3>
+                        <p class="mt-1 text-xs text-slate-400 group-hover:text-slate-100">
+                            My cloud computing background includes cloud infrastructure, service models, security, and
+                            management, as well as the ethical and practical considerations of cloud adoption. I’ve
+                            applied this knowledge in industry, working with Amazon Bedrock to build and test
+                            applications powered by foundation LLMs.
+                        </p>
+                    </div>
+                </div>
             </div>
+
+            <div class = "flex mt-4">
+                <i class="fa-solid fa-microchip text-xl text-white mb-2 mr-1"></i>
+                <h2 class="text-xl font-semibold text-slate-100 mb-2">Technologies I’ve Worked With</h2>
+            </div>
+
+            <p class="text-sm text-slate-400 mb-8">
+                A selection of other tools, libraries, and platforms I’ve had exposure to.
+            </p>
+
+            <div class = "flex mt-4">
+                <i class="fa-solid fa-user-tie text-xl text-white mb-2 mr-1"></i>
+                <h2 class="text-xl font-semibold text-slate-100 mb-2">Professional Skills</h2>
+            </div>
+
+            <p class="text-sm text-slate-400 mb-8">
+                todo
+            </p>
         </div>
     </section>
 

@@ -190,12 +190,12 @@
 
 .skills-card--java:hover {
   /* java blue on top + left */
-  border-top-color: #007396;
-  border-left-color: #007396;
+  border-bottom-color: #007396;
+  border-right-color: #007396;
 
   /* java orange on bottom + right */
-  border-bottom-color: #ED8B00;
-  border-right-color: #ED8B00;
+  border-top-color: #ED8B00;
+  border-left-color: #ED8B00;
 
   /* optional: subtle glow, tweak if too strong */
   box-shadow: 0 0 0 1px rgba(69, 132, 182, 0.45);
