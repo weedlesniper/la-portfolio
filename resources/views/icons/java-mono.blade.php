@@ -1,5 +1,5 @@
 {{-- resources/views/icons/java-mono.blade.php --}}
-<svg class="h-10 w-10 text-slate-300 transition-opacity duration-200 group-hover:opacity-0"
+<svg class="h-12 w-12 text-slate-300 transition-opacity duration-200 group-hover:opacity-0"
     viewBox="-118.513 4.399 540.906 540.906" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path
         d="M285.104 430.945h-2.037v-1.14h5.486v1.14h-2.025v5.688h-1.424v-5.688zm10.942.297h-.032l-2.02 5.393h-.924l-2.006-5.393h-.024v5.393h-1.343v-6.828h1.976l1.86 4.835 1.854-4.835h1.969v6.828h-1.311l.001-5.393z"

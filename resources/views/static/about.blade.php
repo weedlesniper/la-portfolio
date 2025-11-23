@@ -240,13 +240,85 @@
                 <h2 class="text-xl font-semibold text-slate-100 mb-2">Professional Skills</h2>
             </div>
 
-            <p class="text-sm text-slate-400 mb-8">
-                Teamwork & Customer Focus – Built strong communication and collaboration skills through long-term work
-                in hospitality, working in fast-paced, customer-facing teams and handling competing priorities calmly
-                and professionally.
-            </p>
 
-            <div class="max-w-xl">
+            <div class="max-w">
+                {{-- HOSPO --}}
+                <div class="lg:grid lg:grid-cols-[minmax(0,2.1fr)_minmax(0,1.1fr)] lg:gap-6 items-stretch">
+
+                    {{-- HOSPO (left) --}}
+                    <div
+                        class="mb-4 group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/40 shadow-sm transition-all duration-200 hover:bg-slate-900/70 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/30">
+                        {{-- Image section --}}
+                        <div class="relative h-full w-full">
+                            <img src="{{ asset('storage/royals.jpg') }}" alt="training new staff "
+                                class="h-full w-full object-cover" />
+
+                            {{-- dark gradient overlay so text is readable --}}
+                            <div
+                                class="absolute inset-0 bg-linear-to-t from-slate-950/80 via-slate-950/30 to-transparent">
+                            </div>
+
+                            {{-- Heading overlaid on image --}}
+                            <h3
+                                class="absolute bottom-3 left-4 right-4 text-lg font-semibold text-slate-50 drop-shadow-sm">
+                                Teamwork & Customer Focus
+                            </h3>
+                        </div>
+                    </div>
+
+                    {{-- Stats panel (right) --}}
+                    <aside
+                        class="mb-4 flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/60 p-4 sm:p-5 text-slate-100 shadow-sm">
+                        <div>
+                            <h4 class="text-xs font-semibold tracking-[0.18em] text-slate-400 uppercase">
+                                At a glance
+                            </h4>
+
+                            <dl class="mt-4 space-y-4 text-sm">
+                                {{-- Stat 1 --}}
+                                <div class="flex items-center gap-3">
+                                    <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-800/80">
+                                        {{-- TODO: replace with Font Awesome icon --}}
+                                        <span class="text-base">👥</span>
+                                    </div>
+                                    <div>
+                                        <dt class="text-xs font-medium text-slate-400">Fast-paced team experience</dt>
+                                        <dd class="text-sm font-semibold text-slate-50">8+ years</dd>
+                                    </div>
+                                </div>
+
+                                {{-- Stat 2 --}}
+                                <div class="flex items-center gap-3">
+                                    <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-800/80">
+                                        {{-- TODO: replace with Font Awesome icon --}}
+                                        <span class="text-base">🍔</span>
+                                    </div>
+                                    <div>
+                                        <dt class="text-xs font-medium text-slate-400">Consistent dedication</dt>
+                                        <dd class="text-sm font-semibold text-slate-50">2 long-term employers</dd>
+                                        <dt class="text-xs font-medium text-slate-400 italic ">Since 2017</dt>
+                                    </div>
+                                </div>
+
+                                {{-- Description 4 --}}
+                                <div class="flex flex-col gap-2 text-sm text-slate-400 group-hover:text-slate-100">
+                                    <p>• Contiually building strong communication abilities while working in a
+                                        high-pressure environment</p>
+                                    <p>• Comfortable working and communicating in diverse team dynamics</p>
+                                    <p>• Excel in training new staff, exposed to leadership responsibilities from a
+                                        young age</p>
+                                    <p>• Learned to adapt to changing workplace environments and shifts in management
+                                    </p>
+                                </div>
+
+                            </dl>
+                        </div>
+
+                    </aside>
+                </div>
+
+
+
                 <div
                     class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/40 shadow-sm transition-all duration-200 hover:bg-slate-900/70 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/30">
                     {{-- Image section --}}
@@ -259,7 +331,8 @@
                         </div>
 
                         {{-- Heading overlaid on image --}}
-                        <h3 class="absolute bottom-3 left-4 right-4 text-lg font-semibold text-slate-50 drop-shadow-sm">
+                        <h3
+                            class="absolute bottom-3 left-4 right-4 text-lg font-semibold text-slate-50 drop-shadow-sm">
                             Communication & Public Speaking
                         </h3>
                     </div>
@@ -275,38 +348,37 @@
                     </div>
                 </div>
 
-                <div class="max-w-xl">
-                    <div
-                        class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/40 shadow-sm transition-all duration-200 hover:bg-slate-900/70 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/30">
-                        {{-- Image section --}}
-                        <div class="relative h-full w-full">
-                            <img src="{{ asset('storage/wyspgroup.jpg') }}"
-                                alt="Team collaborating on software delivery" class="h-full w-full object-cover" />
 
-                            {{-- dark gradient overlay so text is readable --}}
-                            <div
-                                class="absolute inset-0 bg-linear-to-t from-slate-950/80 via-slate-950/30 to-transparent">
-                            </div>
+                <div
+                    class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/40 shadow-sm transition-all duration-200 hover:bg-slate-900/70 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/30">
+                    {{-- Image section --}}
+                    <div class="relative h-full w-full">
+                        <img src="{{ asset('storage/wyspgroup.jpg') }}" alt="Team collaborating on software delivery"
+                            class="h-full w-full object-cover" />
 
-                            {{-- Heading overlaid on image --}}
-                            <h3
-                                class="absolute bottom-3 left-4 right-4 text-lg font-semibold text-slate-50 drop-shadow-sm">
-                                Collaborative Software Delivery
-                            </h3>
+                        {{-- dark gradient overlay so text is readable --}}
+                        <div class="absolute inset-0 bg-linear-to-t from-slate-950/80 via-slate-950/30 to-transparent">
                         </div>
 
-                        {{-- Description panel, visually attached to image --}}
-                        <div class="px-4 pb-4 pt-3">
-                            <p class="text-sm text-slate-400 group-hover:text-slate-100">
-                                Experienced working in a variety of team development environments in both academia
-                                and industry, contributing as both a team member and project lead using Git-based
-                                workflows, code reviews, and Agile practices.
-                            </p>
-                        </div>
+                        {{-- Heading overlaid on image --}}
+                        <h3
+                            class="absolute bottom-3 left-4 right-4 text-lg font-semibold text-slate-50 drop-shadow-sm">
+                            Collaborative Software Delivery
+                        </h3>
+                    </div>
+
+                    {{-- Description panel, visually attached to image --}}
+                    <div class="px-4 pb-4 pt-3">
+                        <p class="text-sm text-slate-400 group-hover:text-slate-100">
+                            Experienced working in a variety of team development environments in both academia
+                            and industry, contributing as both a team member and project lead using Git-based
+                            workflows, code reviews, and Agile practices.
+                        </p>
                     </div>
                 </div>
-
             </div>
+
+        </div>
 
 
     </section>
