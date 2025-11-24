@@ -38,45 +38,81 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {{-- Python --}}
-                <div class="group skills-card skills-card--python">
-                    <div
-                        class="relative mx-1 flex size-16 items-center justify-center rounded-xl bg-slate-800 overflow-hidden">
-                        @include('icons.python-mono')
-                        @include('icons.python-colour')
+                <div class="group skills-card skills-card--python relative overflow-hidden rounded-2xl">
+                    {{-- Background image --}}
+                    <img src="{{ asset('storage/codesnippets/python.png') }}" alt="Python code snippet"
+                        class="absolute inset-0 h-full w-full object-cover" />
+
+                    {{-- Dark gradient at bottom --}}
+                    <div class="skills-gradient">
                     </div>
-                    <div class = "w-3/4">
-                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">Python</h3>
-                        <p class="mt-1 text-xs text-slate-400 group-hover:text-slate-100 ">
-                            Python is my strongest language, I've used it for ML, computer vision, backend APIs, and
-                            industry AI work. I use it to build practical, efficient systems supported by solid data
-                            structure knowledge.
-                        </p>
+
+                    {{-- Foreground content --}}
+                    <div class="relative flex items-center justify-between p-4 w-full">
+
+                        <div class="w-3/4 space-y-2">
+                            <!-- Always-visible heading with dark tile background -->
+                            <h3 class="skills-heading">
+                                Python
+                            </h3>
+
+                            <!-- Hidden text, rises and fades in -->
+                            <p class="skills-text">
+                                Python is my strongest language—I've used it for ML, computer vision, backend APIs,
+                                and industry AI work. I use it to build practical, efficient systems supported by
+                                solid data structure knowledge.
+                            </p>
+                        </div>
+
+                        <!-- Logo tile (unchanged) -->
+                        <div class="skills-logo">
+                            @include('icons.python-mono')
+                            @include('icons.python-colour')
+                        </div>
+
                     </div>
                 </div>
+
+
 
                 {{-- PHP --}}
-                <div class="group skills-card hover:border-indigo-600/40">
-                    <div
-                        class="relative mx-1 flex size-16 items-center justify-center rounded-xl bg-slate-800 overflow-hidden">
-                        <i
-                            class="fa-brands fa-php
-                                  text-slate-300 text-4xl
-                                    transition-colors duration-200
-                                  group-hover:text-indigo-400/40"></i>
-                    </div>
+                <div class="group skills-card skills-card--php relative overflow-hidden rounded-2xl">
+                    {{-- Background image --}}
+                    <img src="{{ asset('storage/codesnippets/php.png') }}" alt="PHP code snippet"
+                        class="absolute inset-0 h-full w-full object-cover" />
 
-                    <div class = "w-3/4">
-                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">PHP</h3>
-                        <p class="mt-1 text-xs text-slate-400 group-hover:text-slate-100">
-                            I’ve recently been using PHP with Laravel and Blade to build web applications, creating
-                            reusable components and pairing the templating system with Tailwind for clean, consistent
-                            UI.
-                        </p>
+                    {{-- Dark gradient at bottom --}}
+                    <div class="skills-gradient"></div>
+
+                    {{-- Foreground content --}}
+                    <div class="relative flex items-center justify-between p-4 w-full">
+
+                        <div class="w-3/4 space-y-2">
+                            <!-- Always-visible heading -->
+                            <h3 class="skills-heading">
+                                PHP
+                            </h3>
+
+                            <!-- Animated text -->
+                            <p class="skills-text">
+                                I’ve recently been using PHP with Laravel and Blade to build web applications, creating
+                                reusable components and pairing the templating system with Tailwind for clean,
+                                consistent
+                                UI.
+                            </p>
+                        </div>
+
+                        <!-- Font Awesome icon tile -->
+                        <div class="skills-logo-fa">
+                            <i class="fa-brands fa-php text-slate-100 text-4xl "></i>
+                        </div>
+
                     </div>
                 </div>
 
+
                 {{-- Java --}}
-                <div class="group skills-card skills-card--java">
+                <div class="group skills-card skills-card--java items-center">
                     <div
                         class="relative mx-1 flex size-16 items-center justify-center rounded-xl bg-slate-800 overflow-hidden">
                         @include('icons.java-mono')
@@ -93,7 +129,7 @@
                 </div>
 
                 {{-- Git --}}
-                <div class="group skills-card hover:border-[#F1502F]">
+                <div class="group skills-card hover:border-[#F1502F] items-center">
                     <div
                         class="relative mx-1 flex size-16 items-center justify-center rounded-xl bg-slate-800 overflow-hidden">
                         <i
@@ -114,7 +150,7 @@
                 </div>
 
                 {{-- SQL / Databases --}}
-                <div class="group skills-card hover:border-emerald-500">
+                <div class="group skills-card hover:border-emerald-500 items-center">
                     <div
                         class="relative mx-1 flex size-16 items-center justify-center rounded-xl bg-slate-800 overflow-hidden">
                         <i
@@ -135,7 +171,7 @@
                 </div>
 
                 {{-- AWS --}}
-                <div class="group skills-card hover:border-[#FF9900]">
+                <div class="group skills-card hover:border-[#FF9900] items-center">
                     <div
                         class="relative
                     mx-1 flex size-16 items-center justify-center rounded-xl bg-slate-800 overflow-hidden">
@@ -237,13 +273,15 @@
 
             <div class = "flex mt-4">
                 <i class="fa-solid fa-user-tie text-xl text-white mb-2 mr-1"></i>
-                <h2 class="text-xl font-semibold text-slate-100 mb-2">Professional Skills</h2>
+                <h2 class="text-xl font-semibold text-slate-100 mb-2">My Professional Skills</h2>
             </div>
 
 
+            {{-- prof skills section --}}
             <div class="max-w">
+
                 {{-- HOSPO --}}
-                <div class="lg:grid lg:grid-cols-[minmax(0,2.1fr)_minmax(0,1.1fr)] lg:gap-6 items-stretch">
+                <div class="mb-16 lg:grid lg:grid-cols-[minmax(0,2.1fr)_minmax(0,1.1fr)] lg:gap-6 items-stretch">
 
                     {{-- HOSPO (left) --}}
                     <div
@@ -318,64 +356,180 @@
                 </div>
 
 
+                {{-- comms and public speaking --}}
+                <div class=" mb-16 lg:grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,2.1fr)] lg:gap-6 items-stretch">
 
-                <div
-                    class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/40 shadow-sm transition-all duration-200 hover:bg-slate-900/70 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/30">
-                    {{-- Image section --}}
-                    <div class="relative h-full w-full">
-                        <img src="{{ asset('storage/wyspgroup.jpg') }}" alt="Team collaborating on software delivery"
-                            class="h-full w-full object-cover" />
+                    {{-- Stats panel (right) --}}
+                    <aside
+                        class="group mb-4 flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/60 p-4 sm:p-5 text-slate-100 shadow-sm">
+                        <div>
+                            <h4
+                                class="group text-xs font-semibold tracking-[0.18em] text-slate-400 uppercase group-hover:text-slate-100">
+                                At a glance
+                            </h4>
 
-                        {{-- dark gradient overlay so text is readable --}}
-                        <div class="absolute inset-0 bg-linear-to-t from-slate-950/80 via-slate-950/30 to-transparent">
+                            <dl class="mt-4 space-y-4 text-sm">
+                                {{-- Stat 1 --}}
+                                <div class="flex items-center gap-3">
+                                    <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-800/80">
+                                        {{-- TODO: replace with Font Awesome icon (fa-microphone, fa-bullhorn, etc.) --}}
+                                        <span class="text-base">🎤</span>
+                                    </div>
+                                    <div>
+                                        <dt class="text-xs font-medium text-slate-400">Public speaking</dt>
+                                        <dd class="text-sm font-semibold text-slate-50">Presented software projects to
+                                            large groups</dd>
+                                    </div>
+                                </div>
+
+                                {{-- Stat 2 --}}
+                                <div class="flex items-center gap-3">
+                                    <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-800/80">
+                                        {{-- TODO: replace with Font Awesome icon (fa-users, fa-diagram-project, etc.) --}}
+                                        <span class="text-base">🧩</span>
+                                    </div>
+                                    <div>
+                                        <dt class="text-xs font-medium text-slate-400">Cross-audience communication
+                                        </dt>
+                                        <dd class="text-sm font-semibold text-slate-50">Technical & non-technical
+                                            stakeholders</dd>
+                                    </div>
+                                </div>
+
+                                {{-- Stat 3 --}}
+                                <div class="flex items-center gap-3">
+                                    <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-800/80">
+                                        {{-- TODO: replace with Font Awesome icon (fa-comments, fa-lightbulb, etc.) --}}
+                                        <span class="text-base">💬</span>
+                                    </div>
+                                    <div>
+                                        <dt class="text-xs font-medium text-slate-400">Information extraction</dt>
+                                        <dd class="text-sm font-semibold text-slate-50">Turning non-technical input
+                                            into technical tasks</dd>
+                                    </div>
+                                </div>
+
+                                {{-- Description --}}
+                                <div
+                                    class="flex flex-col gap-2 text-sm text-slate-400 group-hover:text-slate-100 mt-3">
+                                    <p>
+                                        Confident speaking in front of small and large groups, delivering
+                                        demonstrations, walkthroughs,
+                                        and project updates tailored to different audiences.
+                                    </p>
+                                    <p>
+                                        Experienced communicating technical concepts clearly, and extracting technical
+                                        needs from
+                                        non-technical stakeholders to guide project direction.
+                                    </p>
+                                </div>
+
+
+                            </dl>
                         </div>
 
-                        {{-- Heading overlaid on image --}}
-                        <h3
-                            class="absolute bottom-3 left-4 right-4 text-lg font-semibold text-slate-50 drop-shadow-sm">
-                            Communication & Public Speaking
-                        </h3>
-                    </div>
+                    </aside>
+                    <div
+                        class="mb-4 group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/40 shadow-sm transition-all duration-200 hover:bg-slate-900/70 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/30">
+                        {{-- Image section --}}
+                        <div class="relative h-full w-full">
+                            <img src="{{ asset('storage/wyspgroup.jpg') }}" alt="training new staff "
+                                class="h-full w-full object-cover" />
 
-                    {{-- Description panel, visually attached to image --}}
-                    <div class="px-4 pb-4 pt-3">
-                        <p class="text-sm text-slate-400 group-hover:text-slate-100">
-                            Confident presenting technical work to both technical and
-                            non-technical stakeholders, including demonstrations, walkthroughs, and project updates
-                            tailored to the
-                            audience.
-                        </p>
+                            {{-- dark gradient overlay so text is readable --}}
+                            <div
+                                class="absolute inset-0 bg-linear-to-t from-slate-950/80 via-slate-950/30 to-transparent">
+                            </div>
+
+                            {{-- Heading overlaid on image --}}
+                            <h3
+                                class="absolute bottom-3 left-4 right-4 text-lg font-semibold text-slate-50 drop-shadow-sm">
+                                Communication & Public Speaking
+                            </h3>
+                        </div>
                     </div>
                 </div>
 
 
                 <div
                     class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/40 shadow-sm transition-all duration-200 hover:bg-slate-900/70 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/30">
+
                     {{-- Image section --}}
                     <div class="relative h-full w-full">
                         <img src="{{ asset('storage/wyspgroup.jpg') }}" alt="Team collaborating on software delivery"
                             class="h-full w-full object-cover" />
 
-                        {{-- dark gradient overlay so text is readable --}}
+                        {{-- dark gradient overlay --}}
                         <div class="absolute inset-0 bg-linear-to-t from-slate-950/80 via-slate-950/30 to-transparent">
                         </div>
 
-                        {{-- Heading overlaid on image --}}
+                        {{-- Heading --}}
                         <h3
                             class="absolute bottom-3 left-4 right-4 text-lg font-semibold text-slate-50 drop-shadow-sm">
                             Collaborative Software Delivery
                         </h3>
                     </div>
 
-                    {{-- Description panel, visually attached to image --}}
-                    <div class="px-4 pb-4 pt-3">
-                        <p class="text-sm text-slate-400 group-hover:text-slate-100">
-                            Experienced working in a variety of team development environments in both academia
-                            and industry, contributing as both a team member and project lead using Git-based
-                            workflows, code reviews, and Agile practices.
-                        </p>
+                    {{-- Description panel --}}
+                    <div class="px-4 pb-4 pt-3 space-y-4">
+
+                        {{-- Stat 1 --}}
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-800/80">
+                                {{-- TODO: replace with Font Awesome icon --}}
+                                <span class="text-base">💻</span>
+                            </div>
+                            <div>
+                                <dt class="text-xs font-medium text-slate-400">Industry & academic experience</dt>
+                                <dd class="text-sm font-semibold text-slate-50">
+                                    Delivered software in both environments
+                                </dd>
+                            </div>
+                        </div>
+
+                        {{-- Stat 2 --}}
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-800/80">
+                                {{-- TODO: replace with FA icon --}}
+                                <span class="text-base">🧩</span>
+                            </div>
+                            <div>
+                                <dt class="text-xs font-medium text-slate-400">Multi-role contributor</dt>
+                                <dd class="text-sm font-semibold text-slate-50">
+                                    Team lead & team member across mixed-skill teams
+                                </dd>
+                            </div>
+                        </div>
+
+                        {{-- Stat 3 --}}
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-800/80">
+                                {{-- TODO: replace with FA icon --}}
+                                <span class="text-base">🌱</span>
+                            </div>
+                            <div>
+                                <dt class="text-xs font-medium text-slate-400">Mentorship</dt>
+                                <dd class="text-sm font-semibold text-slate-50">
+                                    Supported junior students onboarding into projects
+                                </dd>
+                            </div>
+                        </div>
+
+                        {{-- Description --}}
+                        <div class="flex flex-col gap-2 text-sm text-slate-400 group-hover:text-slate-100">
+                            <p>
+                                Worked across diverse development teams in both industry and academia, contributing to
+                                projects using Git workflows, code reviews, and Agile methodologies.
+                            </p>
+                            <p>
+                                Comfortable stepping into different roles depending on team needs—leading, contributing,
+                                or mentoring newer developers to help them work effectively within the project.
+                            </p>
+                        </div>
+
                     </div>
                 </div>
+
             </div>
 
         </div>
