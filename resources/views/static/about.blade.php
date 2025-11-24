@@ -39,24 +39,18 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {{-- Python --}}
                 <div class="group skills-card skills-card--python relative overflow-hidden rounded-2xl">
-                    {{-- Background image --}}
                     <img src="{{ asset('storage/codesnippets/python.png') }}" alt="Python code snippet"
                         class="absolute inset-0 h-full w-full object-cover" />
 
-                    {{-- Dark gradient at bottom --}}
-                    <div class="skills-gradient">
-                    </div>
+                    <div class="skills-gradient"></div>
 
                     {{-- Foreground content --}}
-                    <div class="relative flex items-center justify-between p-4 w-full">
-
-                        <div class="w-3/4 space-y-2">
-                            <!-- Always-visible heading with dark tile background -->
+                    <div class="skills-body">
+                        <div class="space-y-2">
                             <h3 class="skills-heading">
                                 Python
                             </h3>
 
-                            <!-- Hidden text, rises and fades in -->
                             <p class="skills-text">
                                 Python is my strongest language—I've used it for ML, computer vision, backend APIs,
                                 and industry AI work. I use it to build practical, efficient systems supported by
@@ -64,133 +58,174 @@
                             </p>
                         </div>
 
-                        <!-- Logo tile (unchanged) -->
-                        <div class="skills-logo">
+                        <div class="skills-logo skills-logo--clip">
                             @include('icons.python-mono')
                             @include('icons.python-colour')
                         </div>
-
                     </div>
                 </div>
 
 
-
                 {{-- PHP --}}
-                <div class="group skills-card skills-card--php relative overflow-hidden rounded-2xl">
-                    {{-- Background image --}}
+                <div class="group skills-card relative overflow-hidden rounded-2xl hover:border-indigo-600/40">
                     <img src="{{ asset('storage/codesnippets/php.png') }}" alt="PHP code snippet"
+                        class="absolute inset-0 h-full w-full object-cover" />
+
+                    <div class="skills-gradient"></div>
+
+                    <div class="skills-body">
+                        <div class="space-y-2">
+                            <h3 class="skills-heading">
+                                PHP
+                            </h3>
+
+                            <p class="skills-text">
+                                I’ve recently been using PHP with Laravel and Blade to build web applications, creating
+                                reusable components and pairing the templating system with Tailwind for clean,
+                                consistent UI.
+                            </p>
+                        </div>
+
+                        <div class="skills-logo">
+                            <i class="fa-brands fa-php text-slate-100 text-4xl group-hover:text-purple-600/40"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                {{-- Java --}}
+                <div class="group skills-card skills-card--java relative overflow-hidden rounded-2xl">
+                    <img src="{{ asset('storage/codesnippets/java.png') }}" alt="Python code snippet"
+                        class="absolute inset-0 h-full w-full object-cover" />
+
+                    <div class="skills-gradient"></div>
+
+                    {{-- Foreground content --}}
+                    <div class="skills-body">
+                        <div class="space-y-2">
+                            <h3 class="skills-heading">
+                                Java
+                            </h3>
+                            <p class="skills-text">
+                                Java was my first university language, and it formed the foundation of my understanding
+                                of data structures, algorithms, and object-oriented design during my studies.
+                            </p>
+                        </div>
+
+                        <div class="skills-logo skills-logo--clip scale-90">
+
+                            @include('icons.java-mono')
+                            @include('icons.java-colour')
+
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Git --}}
+                <div class="group skills-card relative overflow-hidden rounded-2xl hover:border-[#F1502F]">
+                    {{-- Background image --}}
+                    <img src="{{ asset('storage/codesnippets/git.png') }}" alt="Git code snippet"
                         class="absolute inset-0 h-full w-full object-cover" />
 
                     {{-- Dark gradient at bottom --}}
                     <div class="skills-gradient"></div>
 
                     {{-- Foreground content --}}
-                    <div class="relative flex items-center justify-between p-4 w-full">
-
-                        <div class="w-3/4 space-y-2">
-                            <!-- Always-visible heading -->
+                    <div class="skills-body">
+                        <div class="space-y-2">
                             <h3 class="skills-heading">
-                                PHP
+                                Git / Version Control
                             </h3>
 
-                            <!-- Animated text -->
                             <p class="skills-text">
-                                I’ve recently been using PHP with Laravel and Blade to build web applications, creating
-                                reusable components and pairing the templating system with Tailwind for clean,
-                                consistent
-                                UI.
+                                I’ve used Git extensively across multiple team projects, both as a contributor and as a
+                                project lead. I’m comfortable with branching strategies, pull request workflows, code
+                                reviews.
                             </p>
                         </div>
 
-                        <!-- Font Awesome icon tile -->
-                        <div class="skills-logo-fa">
-                            <i class="fa-brands fa-php text-slate-100 text-4xl "></i>
+                        {{-- Font Awesome Git logo --}}
+                        <div class="skills-logo">
+                            <i
+                                class="fa-brands fa-git-alt
+                       text-slate-300 text-4xl
+                       transition-colors duration-200
+                       group-hover:text-[#F1502F]"></i>
                         </div>
-
                     </div>
                 </div>
 
-
-                {{-- Java --}}
-                <div class="group skills-card skills-card--java items-center">
-                    <div
-                        class="relative mx-1 flex size-16 items-center justify-center rounded-xl bg-slate-800 overflow-hidden">
-                        @include('icons.java-mono')
-                        @include('icons.java-colour')
-                    </div>
-
-                    <div class = "w-3/4">
-                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">Java</h3>
-                        <p class="mt-1 text-xs text-slate-400 group-hover:text-slate-100">
-                            Java was my first university language, and it formed the foundation of my understanding of
-                            data structures, algorithms, and object-oriented design during my studies.
-                        </p>
-                    </div>
-                </div>
-
-                {{-- Git --}}
-                <div class="group skills-card hover:border-[#F1502F] items-center">
-                    <div
-                        class="relative mx-1 flex size-16 items-center justify-center rounded-xl bg-slate-800 overflow-hidden">
-                        <i
-                            class="fa-brands fa-git-alt
-                                  text-slate-300 text-4xl
-                                    transition-colors duration-200
-                                  group-hover:text-[#F1502F]"></i>
-                    </div>
-                    <div class = "w-3/4">
-                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">Git</h3>
-                        <p class="mt-1 text-xs text-slate-400 group-hover:text-slate-100">
-                            I’ve used Git extensively across multiple team projects, both as a contributor and as a
-                            project lead. I’m comfortable with branching strategies, pull request workflows, code
-                            reviews, and keeping repos organised through clear commit messages and branch naming
-                            conventions.
-                        </p>
-                    </div>
-                </div>
 
                 {{-- SQL / Databases --}}
-                <div class="group skills-card hover:border-emerald-500 items-center">
-                    <div
-                        class="relative mx-1 flex size-16 items-center justify-center rounded-xl bg-slate-800 overflow-hidden">
-                        <i
-                            class="fa-solid fa-database
-                                  text-slate-300 text-4xl
-                                    transition-colors duration-200
-                                  group-hover:text-emerald-500"></i>
-                    </div>
-                    <div class = "w-3/4">
-                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">SQL / Databases</h3>
-                        <p class="mt-1 text-xs text-slate-400 group-hover:text-slate-100">
-                            My database experience includes ER modelling, schema design, SQL querying, and applying
-                            relational theory such as normalisation and relational algebra. I’m currently building a
-                            database management tool for a TAFE client that
-                            integrates these ideas in practice.
-                        </p>
+                <div class="group skills-card relative overflow-hidden rounded-2xl hover:border-emerald-500">
+                    {{-- Background image --}}
+                    <img src="{{ asset('storage/codesnippets/sql.png') }}" alt="SQL code snippet"
+                        class="absolute inset-0 h-full w-full object-cover" />
+
+                    {{-- Dark gradient at bottom --}}
+                    <div class="skills-gradient"></div>
+
+                    {{-- Foreground content --}}
+                    <div class="skills-body">
+                        <div class="space-y-2">
+                            <h3 class="skills-heading">
+                                SQL / Databases
+                            </h3>
+
+                            <p class="skills-text">
+                                My database experience includes ER modelling, schema design, SQL querying, and applying
+                                relational theory. I’m currently building a
+                                database management tool for a TAFE client that integrates these ideas in practice.
+                            </p>
+                        </div>
+
+                        {{-- Font Awesome DB icon --}}
+                        <div class="skills-logo">
+                            <i
+                                class="fa-solid fa-database
+                       text-slate-300 text-4xl
+                       transition-colors duration-200
+                       group-hover:text-emerald-500"></i>
+                        </div>
                     </div>
                 </div>
 
+
                 {{-- AWS --}}
-                <div class="group skills-card hover:border-[#FF9900] items-center">
-                    <div
-                        class="relative
-                    mx-1 flex size-16 items-center justify-center rounded-xl bg-slate-800 overflow-hidden">
-                        <i
-                            class="fa-brands fa-aws
-                                  text-slate-300 text-4xl
-                                    transition-colors duration-200
-                                  group-hover:text-[#FF9900]"></i>
-                    </div>
-                    <div class = "w-3/4">
-                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">Cloud Computing</h3>
-                        <p class="mt-1 text-xs text-slate-400 group-hover:text-slate-100">
-                            My cloud computing background includes cloud infrastructure, service models, security, and
-                            management, as well as the ethical and practical considerations of cloud adoption. I’ve
-                            applied this knowledge in industry, working with Amazon Bedrock to build and test
-                            applications powered by foundation LLMs.
-                        </p>
+                <div class="group skills-card relative overflow-hidden rounded-2xl hover:border-[#FF9900]">
+                    {{-- Background image --}}
+                    <img src="{{ asset('storage/codesnippets/image.png') }}" alt="AWS code snippet"
+                        class="absolute inset-0 h-full w-full object-cover" />
+
+                    {{-- Dark gradient at bottom --}}
+                    <div class="skills-gradient"></div>
+
+                    {{-- Foreground content --}}
+                    <div class="skills-body">
+                        <div class="space-y-2">
+                            <h3 class="skills-heading">
+                                Cloud Computing
+                            </h3>
+
+                            <p class="skills-text">
+                                My cloud computing background includes cloud infrastructure, service models, security,
+                                and management. I’ve applied this knowledge in industry, working with Amazon Bedrock to
+                                build and test
+                                applications powered by foundation LLMs.
+                            </p>
+                        </div>
+
+                        {{-- AWS icon --}}
+                        <div class="skills-logo">
+                            <i
+                                class="fa-brands fa-aws
+                       text-slate-300 text-4xl
+                       transition-colors duration-200
+                       group-hover:text-[#FF9900]"></i>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
             <div class = "flex mt-4">

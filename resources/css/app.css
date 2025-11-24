@@ -201,7 +201,7 @@
   box-shadow: 0 0 0 1px rgba(69, 132, 182, 0.45);
 }
 .skills-heading{
-  @apply text-sm font-medium text-slate-100
+  @apply text-sm font-medium text-slate-400 group-hover:text-slate-100
                        bg-slate-900/60 backdrop-blur-sm
                        px-2 py-1 rounded-lg inline-block;
 }
@@ -209,14 +209,20 @@
   @apply absolute inset-0 bg-linear-to-t from-slate-950/80 via-slate-950/40 to-transparent;
 }
 
-.skills-logo{
-  @apply relative ml-6 flex size-16 items-center justify-center
-                   rounded-xl bg-slate-900/70 backdrop-blur-sm overflow-hidden;
+.skills-logo {
+  @apply absolute right-6 top-1/2 -translate-y-1/2
+         flex h-16 w-16 flex-shrink-0 items-center justify-center
+         rounded-xl bg-slate-900/70 backdrop-blur-sm;
 }
-.skills-logo-fa {
-  @apply relative ml-6 flex items-center justify-center
-         h-16 w-16 rounded-xl bg-slate-900/70 backdrop-blur-sm;
+
+.skills-logo--clip {
+  @apply overflow-hidden;
 }
+
+.skills-body {
+  @apply relative p-4 pr-28 w-full; 
+}
+
 
 .skills-text{
   @apply text-xs text-slate-100
