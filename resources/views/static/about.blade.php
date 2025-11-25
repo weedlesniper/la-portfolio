@@ -36,7 +36,7 @@
                 A quick snapshot of the tools and languages I have experience with.
             </p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
                 {{-- Python --}}
                 <div class="group skills-card skills-card--python relative overflow-hidden rounded-2xl">
                     <img src="{{ asset('storage/codesnippets/python.png') }}" alt="Python code snippet"
