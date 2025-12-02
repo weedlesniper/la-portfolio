@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     @else
@@ -254,76 +256,195 @@
                 </p>
 
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+                    {{-- C++ --}}
+                    <div
+                        class="group relative p-[1px] rounded-xl bg-linear-to-b from-white/10 to-white/5 hover:from-[#00599C] hover:to-[#00599C] transition-all duration-500">
+                        <div
+                            class="relative h-full bg-[#0a0a0a] rounded-xl p-6 flex flex-col items-center text-center transition-all duration-300 group-hover:bg-[#0f1219]">
 
-                    <div class="group tech-card">
-                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">
-                            C++
-                        </h3>
-                        <p class="text-xs leading-relaxed opacity-80 text-slate-400 group-hover:text-slate-100">
-                            Used C++ for embedded and IoT development, including programming ESP32 devices.
-                        </p>
-                    </div>
+                            {{-- Icon with Glow Background --}}
+                            <div
+                                class="mb-4 relative flex items-center justify-center w-12 h-12 rounded-full bg-white/5 group-hover:bg-[#00599C]/20 transition-colors">
+                                <i
+                                    class="devicon-cplusplus-plain text-2xl text-gray-400 group-hover:text-[#00599C] transition-colors"></i>
+                            </div>
 
-                    <div class="group tech-card">
-                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">
-                            Qt
-                        </h3>
-                        <p class="text-xs leading-relaxed opacity-80 text-slate-400 group-hover:text-slate-100">
-                            Used Qt to build cross-platform GUI components, developing the interface for a university
-                            IDE
-                            project
-                        </p>
-                    </div>
+                            <h3 class="text-lg font-semibold text-gray-200 mb-2">C++</h3>
 
-                    <div class="group tech-card">
-                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">
-                            TensorFlow
-                        </h3>
-                        <p class="text-xs leading-relaxed opacity-80 text-slate-400 group-hover:text-slate-100">
-                            Used TensorFlow for building and experimenting with machine learning models, training and
-                            evaluation.
-                        </p>
+                            <p
+                                class="text-xs text-gray-500 leading-relaxed group-hover:text-gray-300 transition-colors">
+                                Used for embedded and IoT development, including programming ESP32 devices.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="group tech-card">
-                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">
-                            FastAPI
-                        </h3>
-                        <p class="mt-1 text-xs text-slate-400 group-hover:text-slate-100">
-                            Built lightweight, high-performance APIs with FastAPI, including OCR endpoints, file
-                            handling,
-                            and backend logic for an IoT barcode reader pipeline.
-                        </p>
+                    {{-- Qt --}}
+                    <div
+                        class="group relative p-[1px] rounded-xl bg-linear-to-b from-white/10 to-white/5 hover:from-[#41CD52] hover:to-[#41CD52] transition-all duration-500">
+                        <div
+                            class="relative h-full bg-[#0a0a0a] rounded-xl p-6 flex flex-col items-center text-center transition-all duration-300 group-hover:bg-[#0f1219]">
+
+                            {{-- Icon with Glow Background --}}
+                            <div
+                                class="mb-4 relative flex items-center justify-center w-12 h-12 rounded-full bg-white/5 group-hover:bg-[#41CD52]/20 transition-colors">
+                                <i
+                                    class="devicon-qt-original text-2xl text-gray-400 group-hover:text-[#41CD52] transition-colors"></i>
+                            </div>
+
+                            <h3 class="text-lg font-semibold text-gray-200 mb-2">Qt</h3>
+
+                            <p
+                                class="text-xs text-gray-500 leading-relaxed group-hover:text-gray-300 transition-colors">
+                                Used Qt to build cross-platform GUI components, developing the interface for a
+                                university IDE project
+                            </p>
+                        </div>
                     </div>
-                    <div class="group tech-card">
-                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">
-                            OpenCV
-                        </h3>
-                        <p class="text-xs text-slate-400 group-hover:text-slate-100">
-                            Experience with OpenCV for frame extraction, image preprocessing, and computer vision
-                            workflows
-                            in ML/OCR projects.
-                        </p>
+
+                    {{-- TensorFlow --}}
+                    <div
+                        class="group relative p-[1px] rounded-xl bg-linear-to-b from-white/10 to-white/5 hover:from-[#FF6F00] hover:to-[#FF6F00] transition-all duration-500">
+                        <div
+                            class="relative h-full bg-[#0a0a0a] rounded-xl p-6 flex flex-col items-center text-center transition-all duration-300 group-hover:bg-[#0f1219]">
+
+                            {{-- Icon with Glow Background --}}
+                            <div
+                                class="mb-4 relative flex items-center justify-center w-12 h-12 rounded-full bg-white/5 group-hover:bg-[#FF6F00]/20 transition-colors">
+                                <i
+                                    class="devicon-tensorflow-original text-2xl text-gray-400 group-hover:text-[#FF6F00] transition-colors"></i>
+                            </div>
+
+                            <h3 class="text-lg font-semibold text-gray-200 mb-2">TensorFlow</h3>
+
+                            <p
+                                class="text-xs text-gray-500 leading-relaxed group-hover:text-gray-300 transition-colors">
+                                Used TensorFlow for building and experimenting with machine learning models, training
+                                and
+                                evaluation.t
+                            </p>
+                        </div>
                     </div>
-                    <div class="group tech-card">
-                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">
-                            Linux
-                        </h3>
-                        <p class="mt-1 text-xs text-slate-400 group-hover:text-slate-100">
-                            Worked with Linux through VMware and Ubuntu Server, using it for development, scripting, and
-                            backend tooling.
-                        </p>
+
+                    {{-- TailwindCSS --}}
+                    <div
+                        class="group relative p-[1px] rounded-xl bg-linear-to-b from-white/10 to-white/5 hover:from-[#06B6D4] hover:to-[#06B6D4] transition-all duration-500">
+                        <div
+                            class="relative h-full bg-[#0a0a0a] rounded-xl p-6 flex flex-col items-center text-center transition-all duration-300 group-hover:bg-[#0f1219]">
+
+                            {{-- Icon with Glow Background --}}
+                            <div
+                                class="mb-4 relative flex items-center justify-center w-12 h-12 rounded-full bg-white/5 group-hover:bg-[#06B6D4]/20 transition-colors">
+                                <i
+                                    class="devicon-tailwindcss-plain text-3xl text-gray-400 group-hover:text-[#06B6D4] transition-colors"></i>
+                            </div>
+
+                            <h3 class="text-lg font-semibold text-gray-200 mb-2">TailwindCSS</h3>
+
+                            <p
+                                class="text-xs text-gray-500 leading-relaxed group-hover:text-gray-300 transition-colors">
+                                Implemented utility-first CSS for scalable design systems, enabling rapid prototyping of
+                                highly responsive and accessible layouts
+                            </p>
+                        </div>
                     </div>
-                    <div class="group tech-card">
-                        <h3 class="text-sm font-medium text-slate-400 group-hover:text-slate-100">
-                            React
-                        </h3>
-                        <p class="mt-1 text-xs text-slate-400 group-hover:text-slate-100">
-                            Used React to build both web and mobile interfaces, including a video-annotation web app and
-                            an
-                            Expo-based mobile application.
-                        </p>
+                    {{-- FastAPI --}}
+                    <div
+                        class="group relative p-[1px] rounded-xl bg-linear-to-b from-white/10 to-white/5 hover:from-[#009688] hover:to-[#009688] transition-all duration-500">
+                        <div
+                            class="relative h-full bg-[#0a0a0a] rounded-xl p-6 flex flex-col items-center text-center transition-all duration-300 group-hover:bg-[#0f1219]">
+
+                            {{-- Icon with Glow Background --}}
+                            <div
+                                class="mb-4 relative flex items-center justify-center w-12 h-12 rounded-full bg-white/5 group-hover:bg-[#009688]/20 transition-colors">
+                                <i
+                                    class="devicon-fastapi-plain text-2xl text-gray-400 group-hover:text-[#009688] transition-colors"></i>
+                            </div>
+
+                            <h3 class="text-lg font-semibold text-gray-200 mb-2">FastAPI</h3>
+
+                            <p
+                                class="text-xs text-gray-500 leading-relaxed group-hover:text-gray-300 transition-colors">
+                                Built lightweight, high-performance APIs with FastAPI, including OCR endpoints, file
+                                handling,
+                                and backend logic for an IoT barcode reader pipeline.
+                            </p>
+                        </div>
                     </div>
+
+                    {{-- OpenCV --}}
+                    <div
+                        class="group relative p-[1px] rounded-xl bg-linear-to-b from-white/10 to-white/5 hover:from-[#FF0000] hover:to-[#FF0000] transition-all duration-500">
+                        <div
+                            class="relative h-full bg-[#0a0a0a] rounded-xl p-6 flex flex-col items-center text-center transition-all duration-300 group-hover:bg-[#0f1219]">
+
+                            {{-- Icon with Glow Background --}}
+                            <div
+                                class="mb-4 relative flex items-center justify-center w-12 h-12 rounded-full bg-white/5 group-hover:bg-[#FF0000]/20 transition-colors">
+                                <i
+                                    class="devicon-opencv-plain text-2xl text-gray-400 group-hover:text-[#FF0000] transition-colors"></i>
+                            </div>
+
+                            <h3 class="text-lg font-semibold text-gray-200 mb-2">OpenCV</h3>
+
+                            <p
+                                class="text-xs text-gray-500 leading-relaxed group-hover:text-gray-300 transition-colors">
+                                Experience with OpenCV for frame extraction, image preprocessing, and computer vision
+                                workflows
+                                in ML/OCR projects.
+                            </p>
+                        </div>
+                    </div>
+
+                    {{-- Linux --}}
+                    <div
+                        class="group relative p-[1px] rounded-xl bg-linear-to-b from-white/10 to-white/5 hover:from-[#FCC624] hover:to-[#FCC624] transition-all duration-500">
+                        <div
+                            class="relative h-full bg-[#0a0a0a] rounded-xl p-6 flex flex-col items-center text-center transition-all duration-300 group-hover:bg-[#0f1219]">
+
+                            {{-- Icon with Glow Background --}}
+                            <div
+                                class="mb-4 relative flex items-center justify-center w-12 h-12 rounded-full bg-white/5 group-hover:bg-[#FCC624]/20 transition-colors">
+                                <i
+                                    class="devicon-linux-plain text-3xl text-gray-400 group-hover:text-[#FCC624] transition-colors"></i>
+                            </div>
+
+                            <h3 class="text-lg font-semibold text-gray-200 mb-2">Linux</h3>
+
+                            <p
+                                class="text-xs text-gray-500 leading-relaxed group-hover:text-gray-300 transition-colors">
+                                Worked with Linux through VMware and Ubuntu Server, using it for development, scripting,
+                                and
+                                backend tooling.
+                            </p>
+                        </div>
+                    </div>
+
+                    {{-- React --}}
+                    <div
+                        class="group relative p-[1px] rounded-xl bg-linear-to-b from-white/10 to-white/5 hover:from-[#61DAFB] hover:to-[#61DAFB] transition-all duration-500">
+                        <div
+                            class="relative h-full bg-[#0a0a0a] rounded-xl p-6 flex flex-col items-center text-center transition-all duration-300 group-hover:bg-[#0f1219]">
+
+                            {{-- Icon with Glow Background --}}
+                            <div
+                                class="mb-4 relative flex items-center justify-center w-12 h-12 rounded-full bg-white/5 group-hover:bg-[#61DAFB]/20 transition-colors">
+                                <i
+                                    class="devicon-react-plain text-3xl text-gray-400 group-hover:text-[#61DAFB] transition-colors"></i>
+                            </div>
+
+                            <h3 class="text-lg font-semibold text-gray-200 mb-2">React</h3>
+
+                            <p
+                                class="text-xs text-gray-500 leading-relaxed group-hover:text-gray-300 transition-colors">
+                                Used React to build both web and mobile interfaces, including a video-annotation web app
+                                and
+                                an
+                                Expo-based mobile application.
+                            </p>
+                        </div>
+                    </div>
+
+
                 </div>
             </section>
 
