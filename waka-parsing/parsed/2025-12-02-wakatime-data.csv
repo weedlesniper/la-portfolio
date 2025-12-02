@@ -1,0 +1,71 @@
+snapshot_date,section,name,minutes,raw_time
+2025-11-16,Categories,Coding,1241,20 hrs 41 mins
+2025-11-16,Categories,Writing Docs,230,3 hrs 50 mins
+2025-11-16,Projects,innovation-prj-device-tracker-barcode,515,8 hrs 35 mins
+2025-11-16,Projects,la-saas-jokes-app,470,7 hrs 50 mins
+2025-11-16,Projects,advp-project-2,327,5 hrs 27 mins
+2025-11-16,Projects,cobol,95,1 hr 35 mins
+2025-11-16,Projects,la-portfolio,31,31 mins
+2025-11-16,Projects,tafe,11,11 mins
+2025-11-16,Projects,la-roles-permissions-2025-s2,11,11 mins
+2025-11-16,Projects,LA-php-mvc-jokes-2025-s2,2,2 mins
+2025-11-16,Languages,Python,271,4 hrs 31 mins
+2025-11-16,Languages,Blade Template,258,4 hrs 18 mins
+2025-11-16,Languages,PHP,242,4 hrs 2 mins
+2025-11-16,Languages,Markdown,230,3 hrs 50 mins
+2025-11-16,Languages,JavaScript,160,2 hrs 40 mins
+2025-11-16,Languages,HTML,104,1 hr 44 mins
+2025-11-16,Languages,COBOLFree,51,51 mins
+2025-11-16,Languages,Other,46,46 mins
+2025-11-16,Languages,CSS,44,44 mins
+2025-11-16,Languages,Bash,30,30 mins
+2025-11-16,Languages,Git Config,21,21 mins
+2025-11-16,Languages,JSON,8,8 mins
+2025-11-16,Editors,VS Code,1471,24 hrs 31 mins
+2025-11-16,Operating Systems,Windows,1471,24 hrs 31 mins
+2025-11-16,Machines,Big_Toaster,911,15 hrs 11 mins
+2025-11-16,Machines,small-toaster,560,9 hrs 20 mins
+2025-11-23,Categories,Coding,779,12 hrs 59 mins
+2025-11-23,Categories,Writing Docs,71,1 hr 11 mins
+2025-11-23,Categories,Writing Tests,6,6 mins
+2025-11-23,Projects,la-portfolio,465,7 hrs 45 mins
+2025-11-23,Projects,advp-project-2,367,6 hrs 7 mins
+2025-11-23,Projects,machine-learning-2024,17,17 mins
+2025-11-23,Projects,innovation-prj-device-tracker-barcode,6,6 mins
+2025-11-23,Languages,Blade Template,410,6 hrs 50 mins
+2025-11-23,Languages,JavaScript,246,4 hrs 6 mins
+2025-11-23,Languages,CSS,76,1 hr 16 mins
+2025-11-23,Languages,Markdown,71,1 hr 11 mins
+2025-11-23,Languages,Python,30,30 mins
+2025-11-23,Languages,Image (svg),7,7 mins
+2025-11-23,Languages,JSON,4,4 mins
+2025-11-23,Languages,Other,2,2 mins
+2025-11-23,Languages,CSV,2,2 mins
+2025-11-23,Editors,VS Code,857,14 hrs 17 mins
+2025-11-23,Operating Systems,Windows,857,14 hrs 17 mins
+2025-11-23,Machines,Big_Toaster,752,12 hrs 32 mins
+2025-11-23,Machines,small-toaster,104,1 hr 44 mins
+2025-11-30,Categories,Coding,1014,16 hrs 54 mins
+2025-11-30,Categories,Writing Docs,167,2 hrs 47 mins
+2025-11-30,Projects,la-saas-jokes-app,827,13 hrs 47 mins
+2025-11-30,Projects,la-portfolio,130,2 hrs 10 mins
+2025-11-30,Projects,innovation-prj-device-tracker-barcode,94,1 hr 34 mins
+2025-11-30,Projects,advp-project-2,92,1 hr 32 mins
+2025-11-30,Projects,la-roles-permissions-2025-s2,15,15 mins
+2025-11-30,Projects,xxx-roles-permissions-2025-s2,9,9 mins
+2025-11-30,Projects,LA-InterRIoT-AT2-POR-Pt2-2025-s2,9,9 mins
+2025-11-30,Projects,LuniWork,2,2 mins
+2025-11-30,Languages,Blade Template,438,7 hrs 18 mins
+2025-11-30,Languages,PHP,434,7 hrs 14 mins
+2025-11-30,Languages,Markdown,167,2 hrs 47 mins
+2025-11-30,Languages,Python,56,56 mins
+2025-11-30,Languages,Bash,24,24 mins
+2025-11-30,Languages,JavaScript,18,18 mins
+2025-11-30,Languages,CSS,11,11 mins
+2025-11-30,Languages,C++,11,11 mins
+2025-11-30,Languages,Other,9,9 mins
+2025-11-30,Languages,INI,5,5 mins
+2025-11-30,Editors,VS Code,1182,19 hrs 42 mins
+2025-11-30,Operating Systems,Windows,1182,19 hrs 42 mins
+2025-11-30,Machines,Big_Toaster,918,15 hrs 18 mins
+2025-11-30,Machines,small-toaster,263,4 hrs 23 mins

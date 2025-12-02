@@ -1,0 +1,44 @@
+19 hrs 42 mins
+total
+	
+2 hrs 48 mins
+daily average
+
+Categories:
+Coding 	16 hrs 54 mins
+Writing Docs 	2 hrs 47 mins
+
+Projects:
+la-saas-jokes-app 	13 hrs 47 mins
+la-portfolio 	2 hrs 10 mins
+innovation-prj-device-tracker-barcode 	1 hr 34 mins
+advp-project-2 	1 hr 32 mins
+la-roles-permissions-2025-s2 	15 mins
+xxx-roles-permissions-2025-s2 	9 mins
+LA-InterRIoT-AT2-POR-Pt2-2025-s2 	9 mins
+LuniWork 	2 mins
+LA-php-mvc-jokes-2025-s2 	1 min
+
+Languages:
+Blade Template 	7 hrs 18 mins
+PHP 	7 hrs 14 mins
+Markdown 	2 hrs 47 mins
+Python 	56 mins
+Bash 	24 mins
+JavaScript 	18 mins
+CSS 	11 mins
+C++ 	11 mins
+Other 	9 mins
+INI 	5 mins
+JSON 	1 min
+SQL 	1 min
+
+Editors:
+VS Code 	19 hrs 42 mins
+
+Operating Systems:
+Windows 	19 hrs 42 mins
+
+Machines:
+Big_Toaster 	15 hrs 18 mins
+small-toaster 	4 hrs 23 mins

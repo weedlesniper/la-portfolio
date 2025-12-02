@@ -1,0 +1,40 @@
+14 hrs 17 mins
+total
+	
+2 hrs 51 mins
+daily average
+
+Categories:
+Coding 	12 hrs 59 mins
+Writing Docs 	1 hr 11 mins
+Writing Tests 	6 mins
+
+Projects:
+la-portfolio 	7 hrs 45 mins
+advp-project-2 	6 hrs 7 mins
+machine-learning-2024 	17 mins
+innovation-prj-device-tracker-barcode 	6 mins
+
+Languages:
+Blade Template 	6 hrs 50 mins
+JavaScript 	4 hrs 6 mins
+CSS 	1 hr 16 mins
+Markdown 	1 hr 11 mins
+Python 	30 mins
+Image (svg) 	7 mins
+JSON 	4 mins
+Other 	2 mins
+CSV 	2 mins
+TOML 	1 min
+Git Config 	1 min
+PHP 	1 min
+
+Editors:
+VS Code 	14 hrs 17 mins
+
+Operating Systems:
+Windows 	14 hrs 17 mins
+
+Machines:
+Big_Toaster 	12 hrs 32 mins
+small-toaster 	1 hr 44 mins
