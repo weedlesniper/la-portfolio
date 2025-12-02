@@ -9,8 +9,8 @@
 
 /* Project Card */
 .project-card{
-  @apply relative overflow-hidden rounded-2xl bg-white dark:bg-slate-800
-         border border-slate-200 dark:border-slate-700
+  @apply relative overflow-hidden rounded-2xl bg-white dark:bg-[#161615] 
+         border border-slate-200 dark:border-slate-800
          shadow-sm transition transform
          hover:shadow-md hover:-translate-y-0.5
          focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60;
@@ -209,6 +209,9 @@
 }
 .skills-gradient{
   @apply absolute inset-0 bg-linear-to-t from-slate-950/80 via-slate-950/40 to-transparent;
+}
+.skills-readability-gradient{
+  @apply absolute inset-0 bg-black/0 group-hover:bg-black/80 transition-colors duration-300 ease-in-out;
 }
 
 .skills-logo {

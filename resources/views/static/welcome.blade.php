@@ -83,6 +83,7 @@
                             </span>
                             <a href="{{ route('about') }}"
                                 class="inline-block rounded-full bg-[#f4f1ea] px-3 py-1 dark:bg-[#232320] text-[#4b4a45] dark:text-[#d4d4cf] hover:bg-[#ece6dd] dark:hover:bg-[#2a2a28] transition">
+                                <i class="fa-solid fa-microchip"></i>
                                 See my technologies and skills here →
                             </a>
                         </div>
@@ -128,34 +129,36 @@
 
 
             <!-- Visual / Image Carousel -->
-            <div class="relative bg-[#fff2f2] dark:bg-[#1D0002] rounded-lg overflow-hidden aspect-[16/20]"
+            <div class="relative bg-[#fff2f2] dark:bg-[#1D0002] rounded-lg overflow-hidden aspect-[16/20] lg:aspect-auto lg:h-full"
                 data-carousel>
                 <!-- Slides -->
                 <div class="h-full w-full relative">
                     {{-- Slide 1 --}}
-                    <div class="carousel-slide h-full w-full" data-carousel-slide>
+                    <div class="carousel-slide absolute inset-0 h-full w-full" data-carousel-slide>
                         <img src="{{ asset('storage/landing/headshot.jpg') }}" alt="Luc headshot"
                             class="h-full w-full object-cover" />
                     </div>
+
                     {{-- Slide 2 --}}
-                    <div class="carousel-slide h-full w-full hidden" data-carousel-slide>
+                    <div class="carousel-slide absolute inset-0 h-full w-full hidden" data-carousel-slide>
                         <img src="{{ asset('storage\landing\grad.jpg') }}" alt="luc at tori gate"
                             class="h-full w-full object-cover" />
                     </div>
 
                     {{-- Slide 3 --}}
-                    <div class="carousel-slide h-full w-full hidden" data-carousel-slide>
+                    <div class="carousel-slide absolute inset-0 h-full w-full hidden" data-carousel-slide>
                         <img src="{{ asset('storage/landing/boat.jpg') }}" alt="Luc on a boat"
                             class="h-full w-full object-cover" />
                     </div>
 
                     {{-- Slide 4 --}}
-                    <div class="carousel-slide h-full w-full hidden" data-carousel-slide>
+                    <div class="carousel-slide absolute inset-0 h-full w-full hidden" data-carousel-slide>
                         <img src="{{ asset('storage/landing/museum.jpg') }}" alt="museum"
                             class="h-full w-full object-cover" />
                     </div>
+
                     {{-- Slide 5 --}}
-                    <div class="carousel-slide h-full w-full hidden" data-carousel-slide>
+                    <div class="carousel-slide absolute inset-0 h-full w-full hidden" data-carousel-slide>
                         <img src="{{ asset('storage\landing\tori.jpg') }}" alt="luc at tori gate"
                             class="h-full w-full object-cover" />
                     </div>
@@ -194,19 +197,19 @@
         <section class="w-full max-w-5xl mt-6">
             <div class="grid gap-4 md:grid-cols-2">
                 {{-- Card 1 – GitHub --}}
-                <div
-                    class="rounded-lg bg-white dark:bg-[#161615] shadow-sm border border-[#e7dfcf]/60 dark:border-[#262520] relative overflow-hidden">
+                <div class="card-dark relative overflow-hidden">
                     <div class="px-4 pt-6 pb-10 text-center relative z-10">
-                        <h4 class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-[0.16em]">
-                            GitHub
-                        </h4>
-                        <i
-                            class ="fa-brands fa-github text-xl uppercase text-gray-500 dark:text-gray-400 tracking-[0.16em]"></i>
+                        <a href="https://github.com/weedlesniper"
+                            class="group text-x uppercase text-gray-500 dark:text-gray-400 tracking-[0.16em] justify-center hover:text-slate-100 hover:underline">
+                            GitHub<i
+                                class ="fa-brands fa-github text-xl group-hover:text-slate-100  text-gray-500 dark:text-gray-400 tracking-[0.16em]"></i>
+                        </a>
+
                         <h3 class="text-2xl text-gray-800 dark:text-gray-50 font-semibold my-2">
-                            535+
+                            540+
                         </h3>
                         <p class="text-[11px] text-emerald-500 leading-tight">
-                            ▲ contributions in 2025
+                            ▲ Github contributions in 2025
                         </p>
                     </div>
                     <div class="absolute bottom-0 inset-x-0">
@@ -215,17 +218,18 @@
                 </div>
 
                 {{-- Card 2 – Projects --}}
-                <div
-                    class="rounded-lg bg-white dark:bg-[#161615] shadow-sm border border-[#e7dfcf]/60 dark:border-[#262520] relative overflow-hidden">
+                <div class="card-dark relative overflow-hidden">
                     <div class="px-4 pt-6 pb-10 text-center relative z-10">
-                        <h4 class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-[0.16em]">
-                            Projects
-                        </h4>
+                        <a href="https://github.com/weedlesniper?tab=repositories"
+                            class="group text-x uppercase text-gray-500 dark:text-gray-400 tracking-[0.16em] justify-center hover:text-slate-100 hover:underline">
+                            Repositories<i
+                                class ="fa-brands fa-github text-xl group-hover:text-slate-100  text-gray-500 dark:text-gray-400 tracking-[0.16em]"></i>
+                        </a>
                         <h3 class="text-2xl text-gray-800 dark:text-gray-50 font-semibold my-2">
-                            10+
+                            23+
                         </h3>
-                        <p class="text-[11px] text-emerald-500 leading-tight">
-                            ▲ shipped & documented
+                        <p class="text-[11px] text-amber-500 leading-tight">
+                            ▲ contributed to variety of projects
                         </p>
                     </div>
                     <div class="absolute bottom-0 inset-x-0">
@@ -236,7 +240,7 @@
         </section>
 
         @if ($snapshotDate)
-            <section class="w-full max-w-5xl mt-8 space-y-6">
+            <section id="stats-view" class="w-full max-w-5xl mt-8 space-y-6 scroll-mt-24">
                 {{-- Week selector --}}
                 <div class="flex items-baseline justify-between">
                     <div>
@@ -245,7 +249,9 @@
                         </h2>
 
                         {{-- Snapshot selector --}}
-                        <form method="GET" action="{{ url()->current() }}" class="mt-1 flex items-center gap-2">
+                        {{-- Added . '#stats-view' to the action URL --}}
+                        <form method="GET" action="{{ url()->current() . '#stats-view' }}"
+                            class="mt-1 flex items-center gap-2">
                             <label for="snapshot" class="text-xs text-slate-100">
                                 Week ending:
                             </label>

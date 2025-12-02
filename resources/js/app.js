@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Your existing mini charts
     makeMiniChart('codingChart1', [8, 3, 5, 5, 5, 6, 8, 9], '#22c55e');
     makeMiniChart('codingChart2', [2, 3, 2, 4, 3, 5, 4, 6], '#6366f1');
-    makeMiniChart('codingChart3', [1, 2, 3, 4, 4, 5, 6, 7], '#f97316');
+    makeMiniChart('codingChart3', [6, 2, 5, 2, 2, 5, 6, 9], '#f97316');
 
     // ---- unused
     // function initCodingByWeekChart() {
