@@ -7,7 +7,7 @@ from datetime import date
 snapshot_date = date.today().isoformat()
 INPUT_PATTERN = "stats-week-ending-*.txt" 
 OUTPUT_DIR = Path("parsed")               
-AGGREGATE_CSV = OUTPUT_DIR / f"{snapshot_date}-wakatime-data.csv"
+AGGREGATE_CSV = OUTPUT_DIR / "wakatime-data.csv"
 
 SECTIONS = [
     "Categories",

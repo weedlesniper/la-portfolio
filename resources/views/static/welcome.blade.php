@@ -180,7 +180,7 @@
             </div>
         </section>
         <section class="w-full max-w-5xl mt-6">
-            <div class="grid gap-4 md:grid-cols-3">
+            <div class="grid gap-4 md:grid-cols-2">
                 {{-- Card 1 – GitHub --}}
                 <div
                     class="rounded-lg bg-white dark:bg-[#161615] shadow-sm border border-[#e7dfcf]/60 dark:border-[#262520] relative overflow-hidden">
@@ -202,24 +202,6 @@
                     </div>
                 </div>
 
-                {{-- Card 2 – WakaTime --}}
-                <div
-                    class="rounded-lg bg-white dark:bg-[#161615] shadow-sm border border-[#e7dfcf]/60 dark:border-[#262520] relative overflow-hidden">
-                    <div class="px-4 pt-6 pb-10 text-center relative z-10">
-                        <h4 class="text-xs uppercase text-gray-500 dark:text-gray-400 tracking-[0.16em]">
-                            WakaTime
-                        </h4>
-                        <h3 class="text-2xl text-gray-800 dark:text-gray-50 font-semibold my-2">
-                            120h+
-                        </h3>
-                        <p class="text-[11px] text-emerald-500 leading-tight">
-                            ▲ tracked this year
-                        </p>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0">
-                        <canvas id="codingChart2" height="70"></canvas>
-                    </div>
-                </div>
 
                 {{-- Card 3 – Projects --}}
                 <div
@@ -240,7 +222,58 @@
                     </div>
                 </div>
             </div>
+
         </section>
+        @if ($snapshotDate)
+            <section class="mt-8">
+                <div class="flex items-baseline justify-between mb-3">
+                    <div>
+                        <h2 class="text-sm font-semibold tracking-wide text-slate-400 uppercase">
+                            Weekly Coding Activity
+                        </h2>
+                        <p class="text-xs text-slate-500">
+                            Week ending <span class="font-medium text-slate-300">{{ $snapshotDate }}</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                    @foreach ($wakaCards as $card)
+                        <div
+                            class="group rounded-2xl border border-slate-800 bg-slate-900/60 px-4 py-3 shadow-sm
+                           hover:border-sky-500/70 hover:bg-slate-900 hover:-translate-y-0.5 transition">
+                            <div class="mb-2 flex items-center justify-between">
+                                <h3 class="text-sm font-medium text-slate-200">
+                                    {{ $card['title'] }}
+                                </h3>
+                            </div>
+
+                            <ul class="space-y-1">
+                                @forelse ($card['items'] as $item)
+                                    <li class="flex items-center justify-between text-xs text-slate-300">
+                                        <span class="truncate pr-2">
+                                            {{ $item['name'] }}
+                                        </span>
+                                        <span class="font-mono text-[11px] text-slate-400">
+                                            {{ $item['formatted_time'] }}
+                                        </span>
+                                    </li>
+                                @empty
+                                    <li class="text-xs text-slate-500">
+                                        No data yet for this week.
+                                    </li>
+                                @endforelse
+                            </ul>
+                        </div>
+                    @endforeach
+                </div>
+            </section>
+        @else
+            {{-- Optional: message when there is no CSV data yet --}}
+            <p class="mt-8 text-xs text-slate-500">
+                WakaTime stats will appear here once data is available.
+            </p>
+        @endif
 
     </main>
 
