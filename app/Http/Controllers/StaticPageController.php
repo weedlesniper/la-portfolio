@@ -76,7 +76,7 @@ class StaticPageController extends Controller
 
     public function contact(): View
     {
-        //        return view('static.contact');
+        return view('static.contact');
     }
 
     public function privacy(): View

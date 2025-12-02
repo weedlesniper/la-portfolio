@@ -118,7 +118,7 @@
                             class="inline-flex items-center justify-center px-5 py-2 text-sm bg-[#1b1b18] text-white border border-black rounded-sm hover:bg-black">
                             View Projects
                         </a>
-                        <a href="#contact"
+                        <a href="{{ route('contact') }}"
                             class="inline-flex items-center justify-center px-5 py-2 text-sm border border-[#e4dfd4] dark:border-[#3E3E3A] hover:bg-[#faf7ef] dark:hover:bg-[#1f1f1c] rounded-sm">
                             Get in touch
                         </a>

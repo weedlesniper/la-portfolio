@@ -30,18 +30,13 @@
                         {{ __('About') }}
                     </a>
 
-                    <a href="{{ route('home') }}#contact" class="nav-link">
+                    <a href="{{ route('contact') }}" class="nav-link">
                         {{ __('Contact') }}
                     </a>
                 </div>
             </div>
 
-            <!-- Right side (public) -->
-            <div class="hidden sm:flex sm:items-center sm:ms-6">
-                <a href="mailto:hello@example.com" class="btn-outline">
-                    {{ __('Get in touch') }}
-                </a>
-            </div>
+
 
             <!-- Hamburger -->
             <div class="navbar__hamburger">
