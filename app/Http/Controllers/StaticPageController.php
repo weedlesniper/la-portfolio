@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\WakatimeStats;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class StaticPageController extends Controller
@@ -10,33 +11,62 @@ class StaticPageController extends Controller
     /**
      * Display the Site Welcome / Index page
      */
-    public function home(WakatimeStats $wakatime): View
+    public function home(Request $request, WakatimeStats $wakatime): View
     {
-        $snapshotDate = $wakatime->latestSnapshotDate();
+        $snapshotDates = $wakatime->allSnapshotDates();
+
+        if ($snapshotDates->isEmpty()) {
+            return view('static.welcome', [
+                'snapshotDate' => null,
+                'snapshotDates' => collect(),
+                'wakaCards' => [],
+                'codingByWeek' => collect(),
+                'languagesForSnapshot' => collect(),
+            ]);
+        }
+
+        $selectedSnapshot = $request->query('snapshot');
+
+        if (! $selectedSnapshot || ! $snapshotDates->contains($selectedSnapshot)) {
+            $selectedSnapshot = $snapshotDates->first();
+        }
 
         $cards = [
             'categories' => [
                 'title' => 'Categories',
-                'items' => $wakatime->sectionForLatest('Categories', 4),
+                'items' => $wakatime->sectionForDate('Categories', $selectedSnapshot, 4),
             ],
             'projects' => [
                 'title' => 'Top Projects',
-                'items' => $wakatime->sectionForLatest('Projects', 5),
+                'items' => $wakatime->sectionForDate('Projects', $selectedSnapshot, 5),
             ],
             'languages' => [
                 'title' => 'Languages',
-                'items' => $wakatime->sectionForLatest('Languages', 6),
+                'items' => $wakatime->sectionForDate('Languages', $selectedSnapshot, 6),
             ],
             'machines' => [
                 'title' => 'Machines',
-                'items' => $wakatime->sectionForLatest('Machines', 4),
+                'items' => $wakatime->sectionForDate('Machines', $selectedSnapshot, 4),
             ],
         ];
 
+        $languagesForSnapshot = $wakatime->languagesForSnapshot($selectedSnapshot, 8);
+
+        // NEW: pie chart data for selected week
+        $categoriesForSnapshot = $wakatime->categoriesForSnapshot($selectedSnapshot);
+        $projectsForSnapshot = $wakatime->projectsForSnapshot($selectedSnapshot, 6);
+        $machinesForSnapshot = $wakatime->machinesForSnapshot($selectedSnapshot);
+
         return view('static.welcome', [
-            'snapshotDate' => $snapshotDate,
+            'snapshotDate' => $selectedSnapshot,
+            'snapshotDates' => $snapshotDates,
             'wakaCards' => $cards,
+            'languagesForSnapshot' => $languagesForSnapshot,
+            'categoriesForSnapshot' => $categoriesForSnapshot,
+            'projectsForSnapshot' => $projectsForSnapshot,
+            'machinesForSnapshot' => $machinesForSnapshot,
         ]);
+
     }
 
     public function about(): View

@@ -25,6 +25,7 @@
     @include('layouts.navigation')
 
     <main class="flex-1 flex flex-col items-center p-6 lg:p-8">
+        {{-- Side by side image and hero card --}}
         <section class="w-full max-w-5xl grid lg:grid-cols-2 gap-6">
             <!-- Intro -->
             <div
@@ -179,6 +180,8 @@
                 </div>
             </div>
         </section>
+
+        {{-- github graph section --}}
         <section class="w-full max-w-5xl mt-6">
             <div class="grid gap-4 md:grid-cols-2">
                 {{-- Card 1 – GitHub --}}
@@ -202,8 +205,7 @@
                     </div>
                 </div>
 
-
-                {{-- Card 3 – Projects --}}
+                {{-- Card 2 – Projects --}}
                 <div
                     class="rounded-lg bg-white dark:bg-[#161615] shadow-sm border border-[#e7dfcf]/60 dark:border-[#262520] relative overflow-hidden">
                     <div class="px-4 pt-6 pb-10 text-center relative z-10">
@@ -222,55 +224,107 @@
                     </div>
                 </div>
             </div>
-
         </section>
+
         @if ($snapshotDate)
-            <section class="mt-8">
-                <div class="flex items-baseline justify-between mb-3">
+            <section class="w-full max-w-5xl mt-8 space-y-6">
+                {{-- Week selector --}}
+                <div class="flex items-baseline justify-between">
                     <div>
                         <h2 class="text-sm font-semibold tracking-wide text-slate-400 uppercase">
                             Weekly Coding Activity
                         </h2>
-                        <p class="text-xs text-slate-500">
-                            Week ending <span class="font-medium text-slate-300">{{ $snapshotDate }}</span>
-                        </p>
+
+                        {{-- Snapshot selector --}}
+                        <form method="GET" action="{{ url()->current() }}" class="mt-1 flex items-center gap-2">
+                            <label for="snapshot" class="text-xs text-slate-500">
+                                Week ending:
+                            </label>
+
+                            <select id="snapshot" name="snapshot"
+                                class="rounded-md border border-slate-700 bg-slate-900/80 px-2 py-1 text-xs text-slate-100
+                                       focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+                                onchange="this.form.submit()">
+                                @foreach ($snapshotDates as $date)
+                                    <option value="{{ $date }}" @selected($date === $snapshotDate)>
+                                        {{ $date }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </form>
                     </div>
                 </div>
 
-                <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-                    @foreach ($wakaCards as $card)
-                        <div
-                            class="group rounded-2xl border border-slate-800 bg-slate-900/60 px-4 py-3 shadow-sm
-                           hover:border-sky-500/70 hover:bg-slate-900 hover:-translate-y-0.5 transition">
-                            <div class="mb-2 flex items-center justify-between">
-                                <h3 class="text-sm font-medium text-slate-200">
-                                    {{ $card['title'] }}
-                                </h3>
-                            </div>
+                {{-- Languages – selected week --}}
+                <div class="rounded-2xl border border-slate-800 card-bg-dark px-4 py-3 shadow-sm">
+                    <div class="mb-2 flex items-center justify-between">
+                        <h3 class="text-sm font-medium text-slate-200">
+                            Languages Used – Week ending {{ $snapshotDate }}
+                        </h3>
+                        <p class="text-[11px] text-slate-500">
+                            Top {{ $languagesForSnapshot->count() }} languages
+                        </p>
+                    </div>
+                    <div class="h-64">
+                        <canvas id="languagesChart" data-labels='@json($languagesForSnapshot->pluck('name'))'
+                            data-minutes='@json($languagesForSnapshot->pluck('minutes'))'></canvas>
+                    </div>
+                </div>
 
-                            <ul class="space-y-1">
-                                @forelse ($card['items'] as $item)
-                                    <li class="flex items-center justify-between text-xs text-slate-300">
-                                        <span class="truncate pr-2">
-                                            {{ $item['name'] }}
-                                        </span>
-                                        <span class="font-mono text-[11px] text-slate-400">
-                                            {{ $item['formatted_time'] }}
-                                        </span>
-                                    </li>
-                                @empty
-                                    <li class="text-xs text-slate-500">
-                                        No data yet for this week.
-                                    </li>
-                                @endforelse
-                            </ul>
+
+                {{-- Pie charts: categories, projects, machines --}}
+                <div class="grid gap-4 lg:grid-cols-3">
+                    {{-- 1. Coding vs Docs --}}
+                    <div class="rounded-2xl border border-slate-800 card-bg-dark px-4 py-3 shadow-sm">
+                        <div class="mb-2 flex items-center justify-between">
+                            <h3 class="text-sm font-medium text-slate-200">
+                                Coding vs Documentation
+                            </h3>
+                            <p class="text-[11px] text-slate-500">
+                                Week ending {{ $snapshotDate }}
+                            </p>
                         </div>
-                    @endforeach
+                        <div class="h-56">
+                            <canvas id="categoriesPie" data-labels='@json($categoriesForSnapshot->pluck('name'))'
+                                data-minutes='@json($categoriesForSnapshot->pluck('minutes'))'></canvas>
+                        </div>
+                    </div>
+
+                    {{-- 2. Project distribution --}}
+                    <div class="rounded-2xl border border-slate-800 card-bg-dark px-4 py-3 shadow-sm">
+                        <div class="mb-2 flex items-center justify-between">
+                            <h3 class="text-sm font-medium text-slate-200">
+                                Project Time Distribution
+                            </h3>
+                            <p class="text-[11px] text-slate-500">
+                                Top {{ $projectsForSnapshot->count() }} projects
+                            </p>
+                        </div>
+                        <div class="h-56">
+                            <canvas id="projectsPie" data-labels='@json($projectsForSnapshot->pluck('name'))'
+                                data-minutes='@json($projectsForSnapshot->pluck('minutes'))'></canvas>
+                        </div>
+                    </div>
+
+                    {{-- 3. Machines used --}}
+                    <div class="rounded-2xl border border-slate-800 card-bg-dark px-4 py-3 shadow-sm">
+                        <div class="mb-2 flex items-center justify-between">
+                            <h3 class="text-sm font-medium text-slate-200">
+                                Machines Used
+                            </h3>
+                            <p class="text-[11px] text-slate-500">
+                                Week ending {{ $snapshotDate }}
+                            </p>
+                        </div>
+                        <div class="h-56">
+                            <canvas id="machinesPie" data-labels='@json($machinesForSnapshot->pluck('name'))'
+                                data-minutes='@json($machinesForSnapshot->pluck('minutes'))'></canvas>
+                        </div>
+                    </div>
                 </div>
             </section>
         @else
-            {{-- Optional: message when there is no CSV data yet --}}
-            <p class="mt-8 text-xs text-slate-500">
+            <p class="w-full max-w-5xl mt-8 text-xs text-slate-500">
                 WakaTime stats will appear here once data is available.
             </p>
         @endif

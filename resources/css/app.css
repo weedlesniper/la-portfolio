@@ -35,6 +35,9 @@
   @apply block no-underline;
 }
 
+.card-bg-dark{
+  @apply dark:bg-[#161615];
+}
 /* Media (top image, optional) */
 .project-card__media { position: relative; overflow: hidden; }
 .project-card__media video,
