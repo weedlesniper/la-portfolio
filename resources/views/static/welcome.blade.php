@@ -59,33 +59,36 @@
                             </span>
                     </div>
 
-                    <div
-                        class="flex flex-wrap justify-center gap-2 text-[11px] pt-3 border-t border-[#eee7da] dark:border-[#272723]">
-                        <span
-                            class="rounded-full bg-[#f4f1ea] px-3 py-1 dark:bg-[#232320] text-[#4b4a45] dark:text-[#d4d4cf]">
-                            Laravel · Livewire · Tailwind
-                        </span>
-                        <span
-                            class="rounded-full bg-[#f4f1ea] px-3 py-1 dark:bg-[#232320] text-[#4b4a45] dark:text-[#d4d4cf]">
-                            Python · FastAPI · OCR
-                        </span>
-                        <span
-                            class="rounded-full bg-[#f4f1ea] px-3 py-1 dark:bg-[#232320] text-[#4b4a45] dark:text-[#d4d4cf]">
-                            AI & multimodal tooling
-                        </span>
-                        <span
-                            class="rounded-full bg-[#f4f1ea] px-3 py-1 dark:bg-[#232320] text-[#4b4a45] dark:text-[#d4d4cf]">
-                            ML + Computer Vision pipelines
-                        </span>
-                        <a href="{{ route('about') }}"
-                            class="inline-block rounded-full bg-[#f4f1ea] px-3 py-1 dark:bg-[#232320] text-[#4b4a45] dark:text-[#d4d4cf] hover:bg-[#ece6dd] dark:hover:bg-[#2a2a28] transition">
-                            See my technologies and skills here →
-                        </a>
-
+                    <div class="grid-cols-1 pt-3 pb-3 border-t border-[#eee7da] dark:border-[#272723]">
+                        <p
+                            class="justify-start text-[11px] uppercase tracking-[0.16em] text-[#9a9485] dark:text-[#86837a] mb-2">
+                            Recent Technologies
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-[11px] pt-3 ">
+                            <span
+                                class="rounded-full bg-[#f4f1ea] px-3 py-1 dark:bg-[#232320] text-[#4b4a45] dark:text-[#d4d4cf]">
+                                Laravel · Livewire · Tailwind
+                            </span>
+                            <span
+                                class="rounded-full bg-[#f4f1ea] px-3 py-1 dark:bg-[#232320] text-[#4b4a45] dark:text-[#d4d4cf]">
+                                Python · FastAPI · OCR
+                            </span>
+                            <span
+                                class="rounded-full bg-[#f4f1ea] px-3 py-1 dark:bg-[#232320] text-[#4b4a45] dark:text-[#d4d4cf]">
+                                AI & multimodal tooling
+                            </span>
+                            <span
+                                class="rounded-full bg-[#f4f1ea] px-3 py-1 dark:bg-[#232320] text-[#4b4a45] dark:text-[#d4d4cf]">
+                                ML + Computer Vision pipelines
+                            </span>
+                            <a href="{{ route('about') }}"
+                                class="inline-block rounded-full bg-[#f4f1ea] px-3 py-1 dark:bg-[#232320] text-[#4b4a45] dark:text-[#d4d4cf] hover:bg-[#ece6dd] dark:hover:bg-[#2a2a28] transition">
+                                See my technologies and skills here →
+                            </a>
+                        </div>
                     </div>
                     <div class="pt-3 pb-3 border-t border-b border-[#eee7da] dark:border-[#272723]">
-                        <p
-                            class="justify-center text-[11px] uppercase tracking-[0.16em] text-[#9a9485] dark:text-[#86837a] mb-2">
+                        <p class="text-[11px] uppercase tracking-[0.16em] text-[#9a9485] dark:text-[#86837a] mb-2">
                             Studied & worked with
                         </p>
                         <div class="flex flex-wrap justify-start mt-6 mb-6 gap-4">
@@ -108,7 +111,6 @@
                             </div>
                         </div>
                     </div>
-
 
                     <div class="flex gap-3 pt-2 mt-auto">
                         <a href="{{ route('projects.index') }}"
@@ -135,19 +137,24 @@
                         <img src="{{ asset('storage/landing/headshot.jpg') }}" alt="Luc headshot"
                             class="h-full w-full object-cover" />
                     </div>
-
                     {{-- Slide 2 --}}
                     <div class="carousel-slide h-full w-full hidden" data-carousel-slide>
-                        <img src="{{ asset('storage/landing/boat.jpg') }}" alt="Luc on a boat"
+                        <img src="{{ asset('storage\landing\grad.jpg') }}" alt="luc at tori gate"
                             class="h-full w-full object-cover" />
                     </div>
 
                     {{-- Slide 3 --}}
                     <div class="carousel-slide h-full w-full hidden" data-carousel-slide>
-                        <img src="{{ asset('storage/landing/museum.jpg') }}" alt="museum"
+                        <img src="{{ asset('storage/landing/boat.jpg') }}" alt="Luc on a boat"
                             class="h-full w-full object-cover" />
                     </div>
 
+                    {{-- Slide 4 --}}
+                    <div class="carousel-slide h-full w-full hidden" data-carousel-slide>
+                        <img src="{{ asset('storage/landing/museum.jpg') }}" alt="museum"
+                            class="h-full w-full object-cover" />
+                    </div>
+                    {{-- Slide 5 --}}
                     <div class="carousel-slide h-full w-full hidden" data-carousel-slide>
                         <img src="{{ asset('storage\landing\tori.jpg') }}" alt="luc at tori gate"
                             class="h-full w-full object-cover" />
@@ -177,6 +184,8 @@
                         aria-label="Go to slide 3"></button>
                     <button class="h-1.5 w-1.5 rounded-full bg-white/50" data-carousel-dot
                         aria-label="Go to slide 4"></button>
+                    <button class="h-1.5 w-1.5 rounded-full bg-white/50" data-carousel-dot
+                        aria-label="Go to slide 5"></button>
                 </div>
             </div>
         </section>
@@ -231,18 +240,18 @@
                 {{-- Week selector --}}
                 <div class="flex items-baseline justify-between">
                     <div>
-                        <h2 class="text-sm font-semibold tracking-wide text-slate-400 uppercase">
-                            Weekly Coding Activity
+                        <h2 class="text-sm font-semibold tracking-wide text-slate-100 uppercase">
+                            Recent Weekly Coding Activity
                         </h2>
 
                         {{-- Snapshot selector --}}
                         <form method="GET" action="{{ url()->current() }}" class="mt-1 flex items-center gap-2">
-                            <label for="snapshot" class="text-xs text-slate-500">
+                            <label for="snapshot" class="text-xs text-slate-100">
                                 Week ending:
                             </label>
 
                             <select id="snapshot" name="snapshot"
-                                class="rounded-md border border-slate-700 bg-slate-900/80 px-2 py-1 text-xs text-slate-100
+                                class="rounded-md border border-slate-800 card-dark px-2 py-1 text-xs text-slate-100
                                        focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
                                 onchange="this.form.submit()">
                                 @foreach ($snapshotDates as $date)
@@ -256,7 +265,7 @@
                 </div>
 
                 {{-- Languages – selected week --}}
-                <div class="rounded-2xl border border-slate-800 card-bg-dark px-4 py-3 shadow-sm">
+                <div class="card-dark">
                     <div class="mb-2 flex items-center justify-between">
                         <h3 class="text-sm font-medium text-slate-200">
                             Languages Used – Week ending {{ $snapshotDate }}
@@ -275,10 +284,10 @@
                 {{-- Pie charts: categories, projects, machines --}}
                 <div class="grid gap-4 lg:grid-cols-3">
                     {{-- 1. Coding vs Docs --}}
-                    <div class="rounded-2xl border border-slate-800 card-bg-dark px-4 py-3 shadow-sm">
+                    <div class="card-dark">
                         <div class="mb-2 flex items-center justify-between">
                             <h3 class="text-sm font-medium text-slate-200">
-                                Coding vs Documentation
+                                IDE Split
                             </h3>
                             <p class="text-[11px] text-slate-500">
                                 Week ending {{ $snapshotDate }}
@@ -291,7 +300,7 @@
                     </div>
 
                     {{-- 2. Project distribution --}}
-                    <div class="rounded-2xl border border-slate-800 card-bg-dark px-4 py-3 shadow-sm">
+                    <div class="card-dark">
                         <div class="mb-2 flex items-center justify-between">
                             <h3 class="text-sm font-medium text-slate-200">
                                 Project Time Distribution
@@ -307,7 +316,7 @@
                     </div>
 
                     {{-- 3. Machines used --}}
-                    <div class="rounded-2xl border border-slate-800 card-bg-dark px-4 py-3 shadow-sm">
+                    <div class="card-dark">
                         <div class="mb-2 flex items-center justify-between">
                             <h3 class="text-sm font-medium text-slate-200">
                                 Machines Used
