@@ -35,9 +35,7 @@
   @apply block no-underline;
 }
 
-.card-dark{
-  @apply dark:bg-[#161615] rounded-2xl border border-slate-800 px-4 py-3 shadow-sm;
-}
+
 /* Media (top image, optional) */
 .project-card__media { position: relative; overflow: hidden; }
 .project-card__media video,
@@ -238,20 +236,42 @@
                        transition-all duration-300 ease-out
                        group-hover:opacity-100 group-hover:translate-y-0;
 }
-.tech-card {
-  @apply flex gap-2 rounded-xl border 
-      border-slate-800 hover:border-slate-100
-      bg-slate-900/40 hover:bg-slate-900/70 px-2 py-2
-        transition-colors duration-200
-        flex-col items-center justify-center text-center;
+
+.card-dark{
+  @apply dark:bg-[#161615] rounded-2xl border border-slate-800 px-4 py-3 shadow-sm;
 }
 
-.tech-card:hover {
-  position: relative;
-  border: 1px solid transparent;
-  background: linear-gradient(#0f172a, #0f172a) padding-box,
-              linear-gradient(45deg, #4f46e5, #06b6d4) border-box;
-}
+    /* 1. The Outer Wrapper (Gradient Border) */
+    .tech-card {
+        @apply relative p-[1px] rounded-xl bg-linear-to-b from-gray-200/50 to-gray-200/20 dark:from-white/10 dark:to-white/5 transition-all duration-500;
+    }
+
+    /* 2. The Inner Container (Layout & Background) */
+    .tech-card-centre {
+        /* Layout & Spacing */
+        @apply relative h-full rounded-[10px] p-6 flex flex-col items-center text-center transition-all duration-300;
+        
+        /* Background Colors (Light/Dark) */
+        @apply bg-[#FDFDFC] dark:bg-[#161615] group-hover:bg-[#f4f1ea] dark:group-hover:bg-[#0f1219];
+        
+        /* IMPORTANT: Remove the border from .card-dark so the gradient wrapper shows through */
+        @apply !border-none !shadow-none; 
+    }
+
+    /* 3. The Icon Circle */
+    .tech-card-icon-container {
+        @apply mb-4 relative flex items-center justify-center w-12 h-12 rounded-full bg-gray-900/5 dark:bg-white/5 transition-colors;
+    }
+
+    /* 4. Heading */
+    .tech-card-head {
+        @apply text-lg font-semibold text-gray-900 dark:text-gray-200 mb-2;
+    }
+
+    /* 5. Description */
+    .tech-card-desc {
+        @apply text-xs text-gray-500 dark:text-gray-500 leading-relaxed group-hover:text-gray-800 dark:group-hover:text-gray-300 transition-colors;
+    }
 
 
 }
