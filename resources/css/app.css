@@ -270,7 +270,7 @@
 
     /* 5. Description */
     .tech-card-desc {
-        @apply text-xs text-gray-500 dark:text-gray-500 leading-relaxed group-hover:text-gray-800 dark:group-hover:text-gray-300 transition-colors;
+        @apply text-sm text-gray-500 dark:text-gray-500 leading-relaxed group-hover:text-gray-800 dark:group-hover:text-gray-300 transition-colors;
     }
 
     .prof-card-head{
