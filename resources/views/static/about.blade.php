@@ -322,7 +322,7 @@
                             <h3 class="tech-card-head">TailwindCSS</h3>
                             <p class="tech-card-desc">
                                 Implemented utility-first CSS for scalable design systems, enabling rapid prototyping of
-                                highly responsive and accessible layouts
+                                highly responsive and accessible layouts (like this portfolio).
                             </p>
                         </div>
                     </div>
