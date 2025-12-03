@@ -273,7 +273,13 @@
         @apply text-xs text-gray-500 dark:text-gray-500 leading-relaxed group-hover:text-gray-800 dark:group-hover:text-gray-300 transition-colors;
     }
 
+    .prof-card-head{
+      @apply text-xl font-semibold tracking-[0.18em] text-gray-500 dark:text-slate-400 uppercase group-hover:text-slate-200 transition;
+    }
 
+    .prof-card-text{
+      @apply flex flex-col gap-2 text-sm text-gray-600 dark:text-slate-400 mt-3 group-hover:text-slate-200 transition ;
+    }
 }
 
 

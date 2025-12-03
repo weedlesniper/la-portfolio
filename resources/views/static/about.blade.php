@@ -419,7 +419,7 @@
                     {{-- HOSPO --}}
                     <div class="lg:grid lg:grid-cols-[minmax(0,2.1fr)_minmax(0,1.1fr)] lg:gap-6 items-stretch">
 
-                        {{-- HOSPO (left) --}}
+                        {{-- HOSPO (IMAGE) --}}
                         <div
                             class="mb-4 lg:mb-0 group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40 shadow-sm transition-all duration-200 hover:shadow-md">
                             {{-- Image section --}}
@@ -440,7 +440,7 @@
                             </div>
                         </div>
 
-                        {{-- Stats panel (right) --}}
+                        {{-- HOSPO Stats panel (right) --}}
                         <aside class="group flex flex-col justify-between p-4 border card-dark">
                             <div>
                                 <h4 class="prof-card-head">
@@ -499,11 +499,9 @@
                     <div class="lg:grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,2.1fr)] lg:gap-6 items-stretch">
 
                         {{-- Stats panel (left) --}}
-                        <aside
-                            class="mb-4 lg:mb-0 flex flex-col justify-between rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-4 sm:p-5 shadow-sm order-2 lg:order-1">
+                        <aside class="group flex flex-col justify-between p-4 border card-dark">
                             <div>
-                                <h4
-                                    class="text-xs font-semibold tracking-[0.18em] text-gray-500 dark:text-slate-400 uppercase">
+                                <h4 class="prof-card-head">
                                     At a glance
                                 </h4>
 
@@ -555,17 +553,14 @@
                                     </div>
 
                                     {{-- Description --}}
-                                    <div class="flex flex-col gap-2 text-sm text-gray-600 dark:text-slate-400 mt-3">
+                                    <div class="prof-card-text">
                                         <p>
                                             Confident speaking in front of small and large groups, delivering
-                                            demonstrations, walkthroughs,
-                                            and project updates tailored to different audiences.
+                                            demonstrations, and project updates tailored to different audiences.
                                         </p>
                                         <p>
                                             Experienced communicating technical concepts clearly, and extracting
-                                            technical
-                                            needs from
-                                            non-technical stakeholders to guide project direction.
+                                            technical needs from non-technical stakeholders to guide project direction.
                                         </p>
                                     </div>
                                 </dl>
@@ -574,7 +569,10 @@
 
                         {{-- Image (Right) --}}
                         <div
-                            class="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40 shadow-sm transition-all duration-200 hover:shadow-md order-1 lg:order-2">
+                            class="group
+                                        relative overflow-hidden rounded-2xl border border-slate-200
+                                        dark:border-slate-800 bg-white dark:bg-slate-900/40 shadow-sm transition-all
+                                        duration-200 hover:shadow-md order-1 lg:order-2">
                             {{-- Image section --}}
                             <div class="relative h-full w-full min-h-[200px]">
                                 <img src="{{ asset('storage/wyspgroup.jpg') }}" alt="training new staff "
@@ -619,11 +617,9 @@
                         </div>
 
                         {{-- Stats Panel (Right) --}}
-                        <aside
-                            class="flex flex-col justify-between rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-4 sm:p-5 shadow-sm">
+                        <aside class="group flex flex-col justify-between p-4 border card-dark">
                             <div>
-                                <h4
-                                    class="text-xs font-semibold tracking-[0.18em] text-gray-500 dark:text-slate-400 uppercase">
+                                <h4 class="prof-card-head">
                                     At a glance
                                 </h4>
 
@@ -650,7 +646,8 @@
                                             <span class="text-base">🧩</span>
                                         </div>
                                         <div>
-                                            <dt class="text-xs font-medium text-gray-500 dark:text-slate-400">Role
+                                            <dt class="text-xs font-medium text-gray-500 dark:text-slate-400">
+                                                Role
                                                 Flexibility</dt>
                                             <dd class="text-sm font-semibold text-gray-900 dark:text-slate-50">
                                                 Team Lead & Contributor
@@ -674,14 +671,16 @@
                                     </div>
 
                                     {{-- Description --}}
-                                    <div class="flex flex-col gap-2 text-sm text-gray-600 dark:text-slate-400 mt-3">
+                                    <div class="prof-card-text">
                                         <p>
-                                            Worked across diverse teams contributing to projects using Git workflows,
+                                            Worked across diverse teams contributing to projects using Git
+                                            workflows,
                                             code reviews, and Agile
                                             methodologies.
                                         </p>
                                         <p>
-                                            Comfortable stepping into different roles depending on team needs—leading,
+                                            Comfortable stepping into different roles depending on team
+                                            needs—leading,
                                             contributing, or
                                             mentoring newer developers.
                                         </p>
