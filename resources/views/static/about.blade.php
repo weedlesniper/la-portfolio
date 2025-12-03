@@ -680,9 +680,8 @@
                                         </p>
                                         <p>
                                             Comfortable stepping into different roles depending on team
-                                            needs—leading,
-                                            contributing, or
-                                            mentoring newer developers.
+                                            needs, whether that's leading,
+                                            contributing, or mentoring newer developers.
                                         </p>
                                     </div>
 
